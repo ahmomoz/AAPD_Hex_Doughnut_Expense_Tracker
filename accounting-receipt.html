@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,9 +10,9 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <title>index</title>
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/accounting-receipt-18ce2c2c.js"></script>
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/bootstrap.min-bdc342e9.js">
-    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/bootstrap-7c790e65.css">
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/accounting-receipt-f0bff1a4.js"></script>
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/bootstrap.min-41a425fa.js">
+    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/bootstrap-8de70369.css">
   </head>
   <body>
     <div class="accounting-receipt-section mt-6">
@@ -42,19 +42,21 @@
     <div class="weekday">五</div>
     <div class="weekday">六</div>
   </div>
-  <div class="calendar-days"></div>
+  <div class="calendar-days pt-0"></div>
 </div>
 
-      <div class="mt-2">
+      <!-- 8/5區塊 -->
+      <div id="accounting-receipt-section" class="mt-2">
         <div class="f-between-center px-4 bg-surface-dark-gray">
-          <p class="text-white fs-8">8 月 5 日 星期一</p>
+          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">8</span> 月<span class="font-Nunito fw-semibold"> 5</span> 日<span class="ms-2">星期一</span>
+          </p>
           <div
             class="font-Nunito text-white fw-semibold d-flex align-items-center py-1"
           >
-            <p class="">-$2,050</p>
+            <p class="">-$ 2,050</p>
           </div>
         </div>
-        <div class="f-between-center py-2 px-4 border-bottom">
+        <div class="bg-white border-bottom f-between-center py-2 px-4">
           <div class="d-flex align-items-center">
             <div class="flex-shrink-0">
               <img
@@ -74,7 +76,7 @@
             <p>-$1,600</p>
           </div>
         </div>
-        <div class="f-between-center py-2 px-4 border-bottom">
+        <div class="bg-white border-bottom f-between-center py-2 px-4">
           <div class="d-flex align-items-center">
             <div class="flex-shrink-0">
               <img
@@ -97,7 +99,7 @@
             </span>
           </div>
         </div>
-        <div class="f-between-center py-2 px-4 border-bottom">
+        <div class="bg-white border-bottom f-between-center py-2 px-4">
           <div class="d-flex align-items-center">
             <div class="flex-shrink-0">
               <img
@@ -116,7 +118,7 @@
             <p>+$2,000</p>
           </div>
         </div>
-        <div class="f-between-center py-2 px-4 border-bottom">
+        <div class="bg-white border-bottom f-between-center py-2 px-4">
           <div class="d-flex align-items-center">
             <div class="flex-shrink-0">
               <img
@@ -133,6 +135,71 @@
             class="font-Nunito text-gray-300 fw-semibold d-flex align-items-center"
           >
             <p>$1,000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 無記帳紀錄 -->
+      <div id="no-record-section" class="mt-2 d-none">
+        <div class="f-between-center px-4 bg-surface-dark-gray">
+          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">8</span> 月<span class="font-Nunito fw-semibold"> 2</span> 日<span class="ms-2">星期五</span>
+          </p>
+          <div
+            class="font-Nunito text-white fw-semibold d-flex align-items-center py-1"
+          >
+            <p>$0</p>
+          </div>
+        </div>
+        <div class="f-center pt-10">
+          <p class="text-gray-500">無記帳紀錄</p>
+        </div>
+      </div>
+
+      <!-- 8/3區塊 -->
+      <div id="special-record-section" class="mt-2 d-none">
+        <div class="f-between-center px-4 bg-surface-dark-gray">
+          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">8</span> 月<span class="font-Nunito fw-semibold"> 3</span> 日<span class="ms-2">星期六</span>
+          </p>
+          <div
+            class="font-Nunito text-white fw-semibold d -flex align-items-center py-1"
+          >
+            <p class="">-$ 1,300</p>
+          </div>
+        </div>
+        <div class="bg-white border-bottom f-between-center py-2 px-4">
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAV8SURBVHgB3Zv/ThxVFMe/d5jFUl2yVFNjW2VpKXRtDIuSpsaarvqXwWp5AukTlD4B5QnaPoHtE4CSWv+yaDRqY+0So4QfhcW0jdh0i0VZhJm5nnP3R3Zh9gdzZxaWT7IMMzszzHfOueec+wMBn5gdlwm7CXFDood24xKICCBa6/V07jJdk5ICKdiYNICJ4+fEBHxAQAMWJg18Sjc5z6LgMznhY8LBDR3BnkQqcU0YhkQC9SNFn5GufnEd22RbImduyjhdcaXO4jaTstfxXmxApGq9wKj1xJmv5EXa3NthgUy0qRkLs7fkcK0XVLXkvVEZef45jO4CcVugIDW2+h8u9A6I5UrnVRQ5dUtGmxzcxjai5A5Q1X3LimwQgXkqCi3bJkngKBpDIMPtdJSbltuXriJnv5RXaBNHYxGn2OEajLa4K6WJQdp8hgZF2hjo/liMFR8rEdlg7bAcy/+uo6M44pa4Kwlkc0fR2ET2mxgqPlCwZM6KC6gD6fQTtLTsp08LAqLEmgVL5qwYOJlMBnfu/oi5+RkESIk1i901gTqQyayiHggDF/MpxeQf01/I8wi4LVobFlJ/LODhowdqP2SGEDCRfaZKgxPKkqIJnyBgWCC7aGZtFQfaXkT7ax0IGu7n8tbM7SfgE+yO6XR6y/H00ydqGyVx4RdaVfDZjBkKoTXc6ltAMgxlvCGxQH670Yyn0IQfem5+tiBGhzAJ5Zdx+NAR6EJRts20TP3ybe7+rK/RcmXlGX79bVJF4s5jx6FDqBlRg8ZootBgMdfWgoDvm1pMQYdmmwfXHO8i+U3P3Q803ymhHJm94hiI1Dz84Qa3vw3L+wPUgmVtUGSeh1eE1BSZz3lBs7KyAh20RG7QW9YlZJoqb1bi2T9/QwctkZaLq/JDHzz4cmGfc17xfjEmVT1nz3yAU32nfUkX5dAS6UZvvA9v9vSp0M8CT731ttrn3LdTmPAZbqfsfp1HuxB99ShVMabKe/zJk0/2S4//xPc/fYuWfftVuffGyR7lmouaaWMzvluSRU5N/65+Z4EcHe/8/EPJObHu15V7xrpOqjTEUfrwK0cKx7iv6Se+i2QXjRYV39zu2ttLi/Glv5bUtjg6Lz1eygqm8tDv7pjv7soux0LZPR+QCLYauy4Ly7ssV0n8Yc6eeR8hsvgvybv45ruvEQS+i+T2xGK4EuJCYY2sc4jc0HJJN/wy8j2OcDjsS3HvhknzCctak5Sb4GDCn3L7xbB7ciHO3atHFQoLU7ODbRokEh5ppbev2364XT6sco7OKAKVdSkOPEl4pFql4hc6hYJN0/NGaF3N4Hr+41zhBAm3WZ2XuWYhaXRkxyZT8AC3lc5jXQgSHgvyOhzCCy147DWbJx18Do/wQ+j23svB941qDHhRQJ3grRJpA2PQgPPgO6ff9a2N8n24aOf76mCJrPFU9uDBLIvm4f1YpsJpgetQ3m4XLgoORF5S5aAu7Krd/UK5gbobt8vpcXmNRp21pwoKCb4NO0reVZlC7dps4SovDsIegabXR/K/F0SyNR0H17A3uF68fqCkF7IXrCmziyRGio+ViFTWtHEBDYwDjGxeBbKlP6nm2xvUbbm5xVzW3rl2mkMWLkOjpt0hkifOiSG3L1xFstvaBgYkvNe19STXDgfKfV912Znh4LbYxYslWKBTZdlZxTGe2Ici1byOXiH0yr7AkJhYpeertiy05kEBqogu+1ER+YUjcenER+JqLedua+RjV7gvWY+e+lJXv6g5MHoa3pm6KQfJz4frKpbE2ZJyoIe16FpjWFPjMkFjRIPUZnlu3veF9shWX2O2gxuxei+0d0MJBhKGgR4pycJCWblm4RwladBpma5LOgKT0kYy5tO/TPwPXKoqmJvXJMIAAAAASUVORK5CYII="
+                alt="category-entertainment"
+                style="width: 48px; height: 48px"
+              />
+            </div>
+            <div class="flex-grow-1 ms-2">
+              <p class="fs-6">娛樂</p>
+            </div>
+          </div>
+          <div
+            class="font-Nunito text-red-600 fw-semibold d-flex align-items-center"
+          >
+            <p>-$500</p>
+          </div>
+        </div>
+        <div class="bg-white border-bottom f-between-center py-2 px-4">
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgB7ZvratRaFMf/ezvDgQqnA6fCOYKYI4L4yca2gn5xfAG1+ADaJ1CfQPsE2idQn8D6BM5n7ZgpeEEQjYgdsQodoaPSNtu1dpKaaeeSS3ecjP4gTbInCflnrb3XvqwK7BHq8eMqpJyk7QSdTtJWgYKV4BFrEHBp78LzlmmriZmZGvYAgQxoYaXSZRJzESxq72Hhi9jcvJdFcCqRgbgbJK6K/HChvHkxNXUXCUkkUj1yJlHGrZzF7cTFd5wTp2037g0y7oXKca6iBOcXC2Qs/IU39D434t4w0JL0MK5r94dA3G4U1VeJOWHba/0u6yuSBFr0oIdAolYybwa6b0+RBREY0ldo7zqpyEWLIZDheno/qFq76CqSLr4FP6AXCX7fro3RLndVdecKld5BUfEwK6btxWhRh8iC1cNecC/p/2iLu8NdBZvbQrGpUL/3WrRg25KBFd9gNOiwZulnOVtRIQsbGxv4ur6OVquFNJTLZb39c+AAMhJa8yaf/LTkE4etaCElr1+9wsvnz7XQrIyNjeGQZeHY8ePIwLY1dZ1US0s8VLKQkpcvXuDp8vKeCGTa7bb+YPzcDFSw6YdBv+HZV7qAlIQvZILMniG9i3qnT5SqIiVf1tZgkg8r75EaIbXxZNAVspCSVgKRhw4fxvlLl/Q+Lu31NjJgsT5JUwu5dd+4QYnuc8KSNI1hYZTxvMkS/bHId2GKI0ePYrziDw7+Hh/X+38PHsTY/v36uLmyQvVuBQaplGAYDuz/kagoLDoqvPAin1H8DEWwWLYinzeDMsMCNcZFchxtv32rj7nBYZHcIr8LyvLAXGUcIoxbMgpbjxucPK3I5CqSXddZWkLe/Bbu+kfkqGC8To5TsD9z9qwe8e8krKOfV1dhErak0bESx8VuAhmOmxMTEzCNpJVhswPCX48rsYEGRhlPksiyXqcfXUpoSD03KUZWqLs9W0djygcYRQRqvAtEykWMIltb2nh+nCS/pclzbmVjp6nwZDIPmb4MmC3/0GzqeNiLuPeHY9EEuGJ6WhtPi2S/VfX6Ak2DxE42+LT6kQa8zYHX8YdoZZi2DO/nj5FIZOCq/mGAnpr0F3xiWZO/rumeSpR+nYqufKclgmB5vXN9sl6/mcSaQ4vAXfLOufC0s4Mu5W0Y7ublgItvmI8WdIjUMdPDHIoMp6btyALZNdTS6+3KW0ARUVjolnvXNY8naIQ4d6BIGSANcdK2u/3QddAcdPVmgcJ09zhZabbXj79F2lnf6Q+yqEufwdaJesNJjd9vUFpo7HxXVXcohmJ4YqjCdTFl345zabKk3uFw3xo2SeApO/ZgP116tp+alndiUw1bmBczdg0JyZho71SxD1fokNfmDSba414acSGZREbRgqVXpbbsBD3Vgm/lJMJd+KIa/r9MyEYWYVF+ANSPqtGEUqt7AAAAAElFTkSuQmCC"
+                alt="category-medical"
+                style="width: 48px; height: 48px"
+              />
+            </div>
+            <div class="flex-grow-1 ms-2">
+              <p class="fs-6">醫療</p>
+            </div>
+          </div>
+          <div class="font-Nunito text-red-600 fw-semibold f-column-center">
+            <p>-$800</p>
           </div>
         </div>
       </div>

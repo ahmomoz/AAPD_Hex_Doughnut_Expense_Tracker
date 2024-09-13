@@ -1,0 +1,1 @@
+import"./bootstrap.min-41a425fa.js";import"./budget-pie-chart-41024178.js";new Swiper(".category-top-3-swiper",{loop:!0,navigation:{nextEl:".swiper-button-custom-next",prevEl:".swiper-button-custom-prev"}});
