@@ -9,12 +9,35 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- Material icon -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>搜尋結果</title>
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-5ab77a26.js"></script>
-    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-5c686a1e.css">
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-6f7c25b6.js"></script>
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/calendar-e7eb4b40.js"></script>
+    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-e9a4e488.css">
   </head>
   <body>
-    <div class="accounting-search-section mt-6">
+    <div
+  class="header position-fixed w-100"
+  data-page="搜尋"
+  style="z-index: 200"
+>
+  <div class="bg-white py-3 shadow position-relative">
+    
+    <div class="position-absolute start-0 top-50 translate-middle-y ms-4">
+      <button onclick="window.history.back()" class="btn p-0">
+        <span class="material-symbols-outlined text-gray-600"
+          >chevron_left</span
+        >
+      </button>
+    </div>
+    
+    <p class="text-center" id="pageTitle"></p>
+    
+  </div>
+</div>
+    <div class="accounting-search-section">
       <div class="px-4">
         <div class="position-relative">
           <input
@@ -106,7 +129,9 @@
   id="accountModal"
   tabindex="-1"
   aria-labelledby="accountModalLabel"
-  aria-hidden="true">
+  aria-hidden="true"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false">
   <div class="modal-dialog">
     <div class="modal-content bg-white border-0">
       <div class="modal-header py-2">
@@ -244,7 +269,10 @@
                       <li class="nav-item radius-l p-1">
                         <a  
                           href="#"
-                          class="nav-link f-column-center p-0">
+                          class="nav-link f-column-center p-0"
+                          data-bs-toggle="modal"
+                          data-bs-target="#addCategoryModal"
+                        >
                           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK3SURBVHgB7Zsxb9NAGIZfRwwQliB1YYHLyEQi/kD5BdC9Q2FGIjML5RdAJfZGohJslKFz/AdQw0KYmhMMDERKFgLb9fvsc+S4ttOo9jl37iN9tWs7F796v9yd784eCkIptU2bDsVDvW1RiMuXgBmF1PGNwvc8z0fVsDCKQ4qpKoepLn8bptHiBsosY4o9lA19SacCcUnGFAJlQAW/VJvFaxQFFdZS1buXxWeK1ioN3gqBgjYDrFdLmkZSPKaaWGZdkCnSEoEREjlC80SeImzvbGGIUOgseaKRdjUJfAu7BDJ8v6mV0QUnVdgWHcJedsjN4/iBJZGW/Q6z4HRtx9M2ma5st4DdcJPSix9YOKldHMMNltyMO1lcD6J6ltyMO8kuCrjDws3ASRL4FG4JZNjNoBmM0vUJ3ITNC9PVwVSNkJSu7YbuxQsYYDKZ4t37I8zn/2EIwfo4XY113/5MZvh6OsLPX79hEMEiBdymUweRrQbcpxYicS3SFW6gQLgdPPp0ktkO/tXHP3w8we3mzcxyei920cw5vy6FOtls3gqEKNpPi/gTetY1LG7+r+DOAvUI9pUhvo/O1O7zV2r040wZZP+64nGF2oicwXHqIFKyyCHcJhApYYj79+7iUfcBtrbuwCDDegx/6H++wE18/hOJPIabBOZF6cqDWZyyK6emLSJIVd4JnNRzBgdwCz/aiU8TuOZmO5peX3TrHHOzH18/kJyEdcFNicQiiaUOunbzGezmTXIVyIWnED3fbmvaHtD995MHU5e46LTltQNWLXEhgd20E6nPkzptd2CwX3tFJML7TaUWy85yRwb0BzkFNrXb51N08wSuhTI4qndJeigDKpgnNceqWgYU5VeI9CV7yrzYgapwLXpfbfhCew8FoW+Eg1+ZEDrW6R5KhINqPObEr0wMi3pl4hyrtjtgVvMbEgAAAABJRU5ErkJggg==" alt="category-food-icon">
                           <p class="fs-9 font-Nunito mt-1">
                             新增
@@ -278,7 +306,12 @@
           <a href="#" class="badge badge-sm badge-gray-100">#晚餐</a>
           <a href="#" class="badge badge-sm badge-gray-100">#宵夜</a>
           <a href="#" class="badge badge-sm badge-gray-100">#點心</a>
-          <a href="#" class="badge badge-sm badge-gray-100">
+          <a
+            href="#"
+            class="badge badge-sm badge-gray-100"
+            data-bs-toggle="modal"
+            data-bs-target="#addSubCategoryModal"
+          >
             <img
               src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/add_pressed-abaa834d.svg"
               alt="add-icon"
@@ -287,7 +320,9 @@
         </div>
         <div class="d-flex mt-2 py-1">
           <button
-            class="btn btn-outline-gray-500 fs-8 bg-white py-1 f-center flex-grow-1 position-relative">
+            class="btn btn-outline-gray-500 fs-8 bg-white py-1 f-center flex-grow-1 position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#selectDateModal">
             今天 08/05
             <img
               src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/arrow_left_pressed-c19c196e.svg"
@@ -376,7 +411,169 @@
   </div>
 </div>
 
+<!-- addCategoryModal -->
+<div
+  class="addCategoryModal modal fade"
+  id="addCategoryModal"
+  tabindex="-1" 
+  aria-labelledby="addCategoryModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-white border-0 p-6">
+      <div class="modal-header border-0 p-0">
+        <p
+          class="modal-title fs-6"
+          id="addCategoryModalLabel">
+          新增類別
+        </p>
+        <button
+          type="button"
+          class="btn-close text-gray-600"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body f-column-center p-0 mt-5">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUYSURBVHgB3ZrrbhtFFMfPzLqOBY7kJpXSVJTYRLRARW2nQSKxoLYEiVKElIgHKDxB2ieI/QbNE2DEJz6gREIkuCA5KSShChA7qOJSih0SpY1EI0txUGt1Z5izvtRer6/r3dj+SWt7x7OW/3vOmZlzdgi0gIVowmGTYJpaqBuAOIFzD+Hg4AQcDfxMkhCS5MBjjJM4ZOSVqYArCToh0CQoym6zzHLO/XiAMcQYkHk9YhsWWBAmsxsNWkgXBEhYzsihRoU2JPDbjd05s4WpoZQG3x87H6q3f10Cl6MJJ7XSBfHRA+1BkmVYoB5r0lodIht716VTdAvaRxyCN3xr6U5iulbHqgIja7tzwOTwSbpkFRySRBcwbKp1quiiijhgQegAqsWlpsCl9cS0xJWY6xyo9PHk2EufqZvLBOKAgjHXpm5ZjZQYeLzqgacsBkXwRjtQHOLIjfQllAjMxh04oXPxRNYSweKGgovm5roEdD6p/zLMNRNwpfCkYEHJSuegO3C8YIUb+RPFgl1kvTwFK2YtaAU/dBcFK1rwhXI623zilCV9dAS/3/sVMpkMDAwOwsDZc2Dv7dXs++jhPvx9/0/N76xWK7x26c2K19YLIdJV5b0V7onivl78Uoh7Wmiz23vhg5mPxB/uKekb3/oJtn/5uerv4bX+9ybgdP8Z0INw09O0Fe65+t3tEnFIOn0EcZUQtFwtcflrN+9ugF5sVlFlIEx/lnB4+K9m+95OsuR8V3VejQNxM/Qios5jASKJOgoHM3CPXIE3RHypwbi9vfRVmRe0AKeFEOYEnSPMxLUPNdvV8Yf3UetWPhXCDBAnVFG3RamC6WRg8Fxd/TbvrlccPQ3CYYEW8MXnYU0L9PWdUUbSE6Q1Aiu5l7q9r78fjo8GC+cHjx6C0bREYL28fumycuTZ/HFdWRwYiakCDx8/FlPF8zXFXgPTRrOYKvC3e9tmDzK1y4adjqkWdI+MwtmiKQXXsMhxOg0P7v8BRmCqQFxE21+9qPkdLuOMmOxNFYiZxIOiGETBCC6ujRCHmCoQXfI455ZI8WejoGIVmoIuxiKeqAqBxJQ66Ftvj4PHO1rS9pcYXLa3aueITZLEaSIGOinLGnK8aFeVHXLZRPFh7ekBoyCEJy2c8R1C9aVL54ecmsP88IULJedxYSmjl2bFMM7jlHP9FhwVrqe2IlpvWDUlvCxuRL1g0UovHKQYtcmwCDrBStjlkZGSNt+7/rJ+mDe6vVegFqfEzRq/6gfdUHlF8c1vfvgnKvzVDzpBNz3Y3xeuebFqEpzvpwWWC18R19vtOsuGYmyZ8A15lXmQc3mVEOoHnaBLDldYqTTTTw8ybj+B3GLb9gxudd18KNxTecOXgKjhy4zNQ5fAgYSnxrIPQgvpUjdZkVO58Ly+ILB7rMhCeeshZTN8ZG2n3fbENEJy0jfkKm4oy+gZZTOd6KqEQ0r894C6vUwgmlcGdhM6jGeUfVLsmnk0azJTPleYMVb3hreTh4Wujbs0V2RVV9nL3yeClLb7s3sWmvS5gpW+rZlGRO4kpolEPxWpTVvtncGYkwm7id5WtR/UwfKGeArMaBTaZw9NDAdDrZhT01AieNIuq1iNs/mpdyq7ZNk10CBoTbGSDVJCr4NJ5IU9scOtGa+roSms6VReEcrATzmZFbUBQxYGnPMVcaw2IyyPzs0jWfJixUDkEYLdhGCsEme916OFOMHiF8RkECUUGWJPemGxWVHF/A9dggG3YKaEXgAAAABJRU5ErkJggg=="
+          alt="category-necessary-icon"
+          style="width: 56px; height: 56px;">
+        <input
+          type="text"
+          class="form-control w-100 bg-white border-gray-300 mt-3"
+          placeholder="請輸入類別名稱">
+        <div class="border-0 d-flex w-100 p-0 mt-5">
+          <button
+            type="button"
+            class="btn btn-outline-gray-500 fs-8 w-100"
+            data-bs-dismiss="modal">
+            取消
+          </button>
+          <button
+            type="button"
+            class="btn btn-gray-600 fs-8 w-100 ms-3">
+            儲存
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- addSubCategoryModal -->
+<div
+  class="addSubCategoryModal modal fade"
+  id="addSubCategoryModal"
+  tabindex="-1" 
+  aria-labelledby="addSubCategoryModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-white border-0 p-6">
+      <div class="modal-header border-0 p-0">
+        <p
+          class="modal-title fs-6"
+          id="addSubCategoryModalLabel">
+          新增飲食子類別
+        </p>
+        <button
+          type="button"
+          class="btn-close text-gray-600"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body f-column-center p-0 mt-5">
+        <input
+          type="text"
+          class="form-control w-100 bg-white border-gray-300 mt-3"
+          placeholder="請輸入類別名稱">
+        <div class="border-0 d-flex w-100 p-0 mt-5">
+          <button
+            type="button"
+            class="btn btn-outline-gray-500 fs-8 w-100"
+            data-bs-dismiss="modal">
+            取消
+          </button>
+          <button
+            type="button"
+            class="btn btn-gray-600 fs-8 w-100 ms-3">
+            儲存
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- selectDateModal -->
+<div
+  class="selectDateModal modal fade"
+  id="selectDateModal"
+  tabindex="-1" 
+  aria-labelledby="selectDateModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content bg-white border-0">
+      <div class="modal-header flex-row border-0 p-0">
+        <p
+          class="modal-title fs-6"
+          id="selectDateModalLabel">
+          選擇日期
+        </p>
+        <button
+          type="button"
+          class="btn-close text-gray-600"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body f-column-center p-0 mt-5">
+        <!-- calendar -->
+<div class="calendar">
+  <div class="calendar-header">
+    <button id="prev-month" class="p-0 me-5">
+      <img
+      src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/arrow_left_pressed-c19c196e.svg"
+      alt="arrow_left-icon"
+      style="width: 24px; height: 24px;">
+    </button>
+    <div class="current-month"></div>
+    <button id="next-month" class="p-0 ms-5">
+      <img
+        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/arrow_right_pressed-159812b3.svg"
+        alt="arrow_right-icon"
+        style="width: 24px; height: 24px;">
+    </button>
+  </div>
+  <div class="calendar-weekdays p-0">
+    <div class="weekday">日</div>
+    <div class="weekday">一</div>
+    <div class="weekday">二</div>
+    <div class="weekday">三</div>
+    <div class="weekday">四</div>
+    <div class="weekday">五</div>
+    <div class="weekday">六</div>
+  </div>
+  <div class="calendar-days p-0"></div>
+</div>
+
+        <div class="border-0 d-flex w-100 p-0 mt-8">
+          <button
+            type="button"
+            class="btn btn-gray-600 fs-8 w-100">
+            確認
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script>
   var swiper = new Swiper(".category-swiper", {
     direction: "vertical",
