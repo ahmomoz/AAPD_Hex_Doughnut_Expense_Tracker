@@ -3,19 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>主頁</title>
+    <title>首頁</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/index-865ff4de.js"></script>
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-6f7c25b6.js">
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/calendar-e7eb4b40.js">
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-fb69ad2c.js">
-    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-e9a4e488.css">
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-d49edd8d.js"></script>
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/income-hide-8b7b19c1.js"></script>
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/calendar-e7eb4b40.js"></script>
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-1e830aac.js"></script>
+    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-b8bd6a8b.css">
   </head>
   <body>
-    <div class="home" style="padding-bottom: 150px">
+    <!-- Header -->
+    <div class="header position-fixed w-100" data-page="首頁">
+      <div class="bg-white py-3 shadow font-Nunito fs-7 position-relative">
+        <p class="text-center" style="transform: translateY(3px)">
+          2024 / 07 / 05 - 2024 / 08 / 04
+        </p>
+        <div class="position-absolute end-0 top-50 translate-middle-y me-4">
+          <img
+            src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/review_uncheceked-151006ca.svg"
+            alt="review icon"
+            style="cursor: pointer"
+            data-bs-toggle="modal"
+            data-bs-target="#expenseReviewModal"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="expenseReviewModal"
+      tabindex="-1"
+      aria-labelledby="expenseReviewModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content mx-auto border-0" style="width: 50%">
+          <div class="modal-header border-bottom-0 pt-6 pe-6">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center px-10 py-0 mb-9">
+            <img src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/img_good-a8d1d057.png" alt="" class="w-100" />
+          </div>
+          <div class="modal-footer border-top-0 px-6 py-0 pb-6">
+            <a
+              href="review-expense.html"
+              type="button"
+              class="btn btn-gray-600 w-100 fs-8 m-0 py-1"
+            >
+              回顧上月財務
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home pt-13 pb-14">
       <div class="container">
         <div class="d-flex mb-5">
           <div class="w-50 me-2">
@@ -33,7 +84,7 @@
     </div>
 
     <p class="income font-Nunito text-gray-950 fw-bold fs-5">
-      $ <span>36,000</span>
+      $<span>36,000</span>
     </p>
   </div>
 </div>
@@ -42,15 +93,21 @@
  <div class="w-50 me-2">
   <div class="bg-surface-second radius-l py-4 px-5 income-card">
     <div class="d-flex mb-3 align-items-center">
-      <p class="fs-9 text-gray-600" style="margin-right: 2px">本月目標</p>
+      <p class="fs-9 text-gray-600" style="margin-right: 2px">
+        本月目標
+      </p>
+
+      
       <img
         src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/edit_presed-1da754ca.svg"
         alt="edit icon"
         width="16"
         height="16"
       />
+      
     </div>
 
+    <!-- fs-5 -->
     <p class="font-Nunito text-gray-950 fw-bold fs-5">存下 $8,000</p>
   </div>
 </div>
@@ -474,18 +531,22 @@
     <li>
       <a
         href="index.html"
-        class="pt-3 pb-1 px-3 d-none">
-        <img 
+        class="pt-3 pb-1 px-3 d-none"
+      >
+        <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/home_default-0be4515a.svg"
-          alt="home-icon">
+          alt="home-icon"
+        />
         <p class="fs-10 text-gray-600 mt-1">首頁</p>
       </a>
       <a
         href="index.html"
-        class="pt-3 pb-1 px-3 ">
-        <img 
+        class="pt-3 pb-1 px-3 "
+      >
+        <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/home_selected-1b7def18.svg"
-          alt="home_selected-icon">
+          alt="home_selected-icon"
+        />
         <p class="fs-10 text-orange-400 mt-1">首頁</p>
       </a>
     </li>
@@ -493,19 +554,21 @@
       <a
         href="accounting-receipt.html"
         class="pt-3 pb-1 px-3 "
-        >
+      >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/details_default-8edeb0e8.svg"
-          alt="detail-icon">
+          alt="detail-icon"
+        />
         <p class="fs-10 text-gray-600 mt-1">明細</p>
       </a>
       <a
         href="accounting-receipt.html"
         class="pt-3 pb-1 px-3 d-none"
-        >
+      >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/details_selected-cce88395.svg"
-          alt="detail_selected-icon">
+          alt="detail_selected-icon"
+        />
         <p class="fs-10 text-orange-400 mt-1">明細</p>
       </a>
     </li>
@@ -514,25 +577,44 @@
         href="#"
         class="account-btn"
         data-bs-toggle="modal"
-        data-bs-target="#accountModal">
+        data-bs-target="#accountModal"
+      >
         <img
-          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/account btn-8cc4ac62.png" 
-          alt="account-btn">
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/account btn-8cc4ac62.png"
+          alt="account-btn"
+        />
       </a>
     </li>
+    <!-- 統計 -->
     <li>
-      <a href="#" class="pt-3 pb-1 px-3">
+      <a
+        href="statistics.html"
+        class="pt-3 pb-1 px-3 "
+      >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/chart_default-68b8566f.svg"
-          alt="chart-icon">
+          alt="chart-icon"
+        />
         <p class="fs-10 text-gray-600 mt-1">統計</p>
+      </a>
+
+      <a
+        href="statistics.html"
+        class="pt-3 pb-1 px-3 d-none"
+      >
+        <img
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/chart_selected-e741477c.svg"
+          alt="chart-icon"
+        />
+        <p class="fs-10 text-orange-400 mt-1">統計</p>
       </a>
     </li>
     <li>
       <a href="#" class="pt-3 pb-1 px-3">
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/user_default-865b9d9d.svg"
-          alt="user-icon">
+          alt="user-icon"
+        />
         <p class="fs-10 text-gray-600 mt-1">設定</p>
       </a>
     </li>

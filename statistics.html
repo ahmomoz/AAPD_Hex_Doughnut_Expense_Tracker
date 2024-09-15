@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>accountSetting</title>
-    <!-- Material icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-  <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-d49edd8d.js"></script>
-  <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/calendar-e7eb4b40.js"></script>
-  <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-b8bd6a8b.css">
-</head>
-
-<body>
+    <title>統計</title>
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/statistics-ec47c9e9.js"></script>
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-d49edd8d.js">
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/income-hide-8b7b19c1.js">
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/calendar-e7eb4b40.js">
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-1e830aac.js">
+    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-b8bd6a8b.css">
+  </head>
+  <body>
     <div
   class="header position-fixed w-100"
-  data-page="設定"
+  data-page="統計"
   style="z-index: 200"
 >
   <div class="bg-white py-3 shadow position-relative">
@@ -27,168 +23,416 @@
     
   </div>
 </div>
-        <section class="account-setting bg-orange-50 vh-100 py-13">
-            <div class="container" style="padding-bottom: 100px;">
-                <div class="text-center">
-                    <img class="avatar mb-3" src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/Avatar-c0cd99d3.png" style="height: 80px; width: 80px;" />
-                    <p class="mb-6">佳怡<button type="button" class="btn p-0"><img
-                                src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/edit_default-91e4bd7d.svg" height="16px" width="16px"></button>
-                    </p>
-                </div>
-                <ul>
-                    <li class="rounded bg-white shadow py-5 px-4 mb-4">
-                        <p class="mb-4">帳號設定</p>
-                        <ul>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>個人資料</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500">
-                                    <p>安全性設定</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="rounded bg-white shadow py-5 px-4 mb-4">
-                        <p class="mb-4">銀行帳戶設定</p>
-                        <a href="accountSetting.html"
-                            class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                            <p>帳戶綁定</p>
-                            <span class="material-symbols-outlined ms-auto">
-                                chevron_right
-                            </span>
-                        </a>
-                    </li>
-                    <li class="rounded bg-white shadow py-5 px-4 mb-4">
-                        <p class="mb-4">記帳快捷設定</p>
-                        <ul>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>捷徑設定</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500">
-                                    <p>小工具設定</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="rounded bg-white shadow py-5 px-4 mb-4">
-                        <p class="mb-4">通知設定</p>
-                        <button type="button"
-                            class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                            <p>每日記帳提醒</p>
-                            <span class="material-symbols-outlined ms-auto">
-                                chevron_right
-                            </span>
-                        </button>
-                    </li>
-                    <li class="rounded bg-white shadow py-5 px-4 mb-4">
-                        <p class="mb-4">新手教程</p>
-                        <button type="button"
-                            class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                            <p>如何記帳？</p>
-                            <span class="material-symbols-outlined ms-auto">
-                                chevron_right
-                            </span>
-                        </button>
-                    </li>
-                    <li class="rounded bg-white shadow py-5 px-4 mb-4">
-                        <p class="mb-4">偏好設定</p>
-                        <ul>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>設定每月起始日</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>分類管理</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>標籤管理</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>信用卡消費明細日期顯示</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="rounded bg-white shadow py-5 px-4 mb-4">
-                        <p class="mb-4">條款與政策</p>
-                        <ul>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>資訊安全政策</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>隱私權政策</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button"
-                                    class="btn w-100 d-flex border border-1 border-gray-300 bg-orange-50 text-gray-500 mb-2">
-                                    <p>會員使用條款</p>
-                                    <span class="material-symbols-outlined ms-auto">
-                                        chevron_right
-                                    </span>
-                                </button>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+
+    <div class="statistics pt-13 pb-14">
+      <div class="container">
+        <div class="main-content">
+          <div class="d-flex flex-column">
+            <!-- Level 1 - Tab - 趨勢 / 報告 -->
+            <div class="list-group-wrapper mb-9">
+              <div class="list-group flex-row" id="list-tab" role="tablist">
+                <a
+                  class="list-group-item list-group-item-action active"
+                  id="list-trend-list"
+                  data-bs-toggle="list"
+                  href="#list-trend"
+                  role="tab"
+                  aria-controls="list-trend"
+                  >趨勢</a
+                >
+                <a
+                  class="list-group-item list-group-item-action"
+                  id="list-report-list"
+                  data-bs-toggle="list"
+                  href="#list-report"
+                  role="tab"
+                  aria-controls="list-report"
+                  >報告</a
+                >
+              </div>
             </div>
-        </section>
-        <nav class="tab-bar-section fixed-bottom bg-white">
+            <!-- Level 1 - Tab Content - 趨勢 / 報告 -->
+            <div>
+              <div class="tab-content" id="nav-tabContent">
+                <!-- Level 1 - Tab 1 Content - 趨勢 -->
+                <div
+                  class="tab-pane fade show active"
+                  id="list-trend"
+                  role="tabpanel"
+                  aria-labelledby="list-trend-list"
+                >
+                  <!-- 日期 -->
+                  <div class="date-picker px-4 mb-6">
+                    <div
+                      class="d-flex justify-content-between align-items-center bg-white radius-sm py-3 px-4"
+                    >
+                      <img
+                        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/arrow_left_default-39b2c831.svg"
+                        alt="right arrow"
+                      />
+                      <p class="text-black fs-8 font-Nunito">
+                        2024 / 01/ 01 - 2024 / 07 / 31
+                      </p>
+                      <img
+                        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/arrow_right_default-3f0227da.svg"
+                        alt="right arrow"
+                      />
+                    </div>
+                  </div>
+                  <!-- Income Card -->
+                  <div class="d-flex mb-5">
+                    <div class="w-50 me-2">
+  <div class="bg-surface-second radius-l py-4 px-5 income-card">
+    <div class="d-flex mb-3 align-items-center">
+      <p class="fs-9 text-gray-600" style="margin-right: 2px">本月收入</p>
+      <img
+        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/eye_grey_yes-05e3eede.svg"
+        alt="eye icon"
+        class="eye-icon"
+        data-show="true"
+        width="16"
+        height="16"
+      />
+    </div>
+
+    <p class="income font-Nunito text-gray-950 fw-bold fs-5">
+      $<span>36,000</span>
+    </p>
+  </div>
+</div>
+
+
+ <div class="w-50 me-2">
+  <div class="bg-surface-second radius-l py-4 px-5 income-card">
+    <div class="d-flex mb-3 align-items-center">
+      <p class="fs-9 text-gray-600" style="margin-right: 2px">總存款</p>
+      <img
+        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/eye_grey_yes-05e3eede.svg"
+        alt="eye icon"
+        class="eye-icon"
+        data-show="true"
+        width="16"
+        height="16"
+      />
+    </div>
+
+    <p class="income font-Nunito text-gray-950 fw-bold fs-5">
+      $<span>550,000</span>
+    </p>
+  </div>
+</div>
+
+
+                  </div>
+                  <!-- 年度存款 -->
+                  <div>
+                    <h5 class="section-title mb-2">年度存款</h5>
+                    <div class="section-block">
+                      <canvas id="savingLineChart"> </canvas>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Level 1 - Tab 2 Content - 報告 -->
+                <div
+                  class="tab-pane fade"
+                  id="list-report"
+                  role="tabpanel"
+                  aria-labelledby="list-report-list"
+                >
+                  <!-- 日期 -->
+                  <div class="date-picker px-4 mb-6">
+                    <div
+                      class="d-flex justify-content-between align-items-center bg-white radius-sm py-3 px-4"
+                    >
+                      <img
+                        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/arrow_left_default-39b2c831.svg"
+                        alt="right arrow"
+                      />
+                      <p class="text-black fs-8 font-Nunito">
+                        2024 / 01/ 01 - 2024 / 07 / 31
+                      </p>
+                      <img
+                        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/arrow_right_default-3f0227da.svg"
+                        alt="right arrow"
+                      />
+                    </div>
+                  </div>
+                  <!-- Level 2 - Tab - 支出 / 收入 -->
+                  <div class="d-flex flex-column section-block p-4">
+                    <div
+                      class="list-group-wrapper list-group-wrapper-secondary mb-6"
+                    >
+                      <div
+                        class="list-group flex-row"
+                        id="list-tab"
+                        role="tablist"
+                      >
+                        <a
+                          class="list-group-item list-group-item-secondary list-group-item-action active"
+                          id="list-expense-list"
+                          data-bs-toggle="list"
+                          href="#list-expense"
+                          role="tab"
+                          aria-controls="list-expense"
+                          >支出</a
+                        >
+                        <a
+                          class="list-group-item list-group-item-secondary list-group-item-action"
+                          id="list-income-list"
+                          data-bs-toggle="list"
+                          href="#list-income"
+                          role="tab"
+                          aria-controls="list-report"
+                          >收入</a
+                        >
+                      </div>
+                    </div>
+                    <!-- Level 2 - Tab Content - 支出 / 收入 -->
+                    <div>
+                      <div class="tab-content" id="nav-tabContent">
+                        <!-- Level 2 - Tab 1 Content - 支出 -->
+                        <div
+                          class="tab-pane fade show active"
+                          id="list-expense"
+                          role="tabpanel"
+                          aria-labelledby="list-expense-list"
+                        >
+                          <!-- Income Card -->
+                          <div class="d-flex mb-5">
+                            <div class="w-50 me-2">
+  <div class="bg-gray-50 radius-l py-4 px-5 income-card">
+    <div class="d-flex mb-3 align-items-center">
+      <p class="fs-9 text-gray-600" style="margin-right: 2px">總存款</p>
+      <img
+        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/eye_grey_yes-05e3eede.svg"
+        alt="eye icon"
+        class="eye-icon"
+        data-show="true"
+        width="16"
+        height="16"
+      />
+    </div>
+
+    <p class="income font-Nunito text-gray-950 fw-bold fs-5">
+      $<span>12,950</span>
+    </p>
+  </div>
+</div>
+
+
+                            <!-- card 2 -->
+                            <div class="w-50 me-2">
+  <div class="bg-gray-50 radius-l py-4 px-5 income-card">
+    <div class="d-flex mb-3 align-items-center">
+      <p class="fs-9 text-gray-600" style="margin-right: 2px">
+        比前月增加
+      </p>
+
+       
+    </div>
+
+    <!-- fs-5 -->
+    <p class="font-Nunito text-gray-950 fw-bold fs-5">$8,000</p>
+  </div>
+</div>
+                          </div>
+
+                          <!-- Chart -->
+                          <canvas id="monthly-total-expense-pie-chart"></canvas>
+                          <!-- List Table -->
+                          <div class="w-100 mt-6">
+                            <p
+                              class="fs-8 text-gray-600 text-end pe-4 py-2 border-bottom"
+                            >
+                              支出
+                            </p>
+                            <ul>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-food"></div>
+      <p class="fs-8">飲食</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $14,000
+      </p>
+    </div>
+  </div>
+</li>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-shop"></div>
+      <p class="fs-8">購物</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $14,000
+      </p>
+    </div>
+  </div>
+</li>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-transport"></div>
+      <p class="fs-8">交通</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $2,000
+      </p>
+    </div>
+  </div>
+</li>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-entertainment"></div>
+      <p class="fs-8">娛樂</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $2,000
+      </p>
+    </div>
+  </div>
+</li>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-learn"></div>
+      <p class="fs-8">學習</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $4,700
+      </p>
+    </div>
+  </div>
+</li>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-life"></div>
+      <p class="fs-8">生活</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $8,000
+      </p>
+    </div>
+  </div>
+</li>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-medical"></div>
+      <p class="fs-8">醫療</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $3,000
+      </p>
+    </div>
+  </div>
+</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Level 2 - Tab 2 Content - 收入 -->
+                        <div
+                          class="tab-pane fade"
+                          id="list-income"
+                          role="tabpanel"
+                          aria-labelledby="list-income-list"
+                        >
+                          <div class="mb-6">
+                            <div class="w-100 me-2">
+  <div class="bg-gray-50 radius-l py-4 px-5 income-card">
+    <div class="d-flex mb-3 align-items-center">
+      <p class="fs-9 text-gray-600" style="margin-right: 2px">本月總收入</p>
+      <img
+        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/eye_grey_yes-05e3eede.svg"
+        alt="eye icon"
+        class="eye-icon"
+        data-show="true"
+        width="16"
+        height="16"
+      />
+    </div>
+
+    <p class="income font-Nunito text-gray-950 fw-bold fs-5">
+      $<span>38,000</span>
+    </p>
+  </div>
+</div>
+
+
+                          </div>
+
+                          <!-- Chart -->
+                          <canvas id="total-income-pie-char"></canvas>
+                          <!-- List Table -->
+                          <div class="w-100 mt-6">
+                            <p
+                              class="fs-8 text-gray-600 text-end pe-4 py-2 border-bottom"
+                            >
+                              收入
+                            </p>
+                            <ul>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-earnings"></div>
+      <p class="fs-8">薪水</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $35,000
+      </p>
+    </div>
+  </div>
+</li>
+                              <li class="list-hover">
+  <div class="px-4 py-3 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center me-4">
+      <div class="category-color-index bg-light-bonus"></div>
+      <p class="fs-8">獎金</p>
+    </div>
+
+    <div class="ms-4">
+      <p class="font-Nunito fw-semibold fs-8">
+        $3,000
+      </p>
+    </div>
+  </div>
+</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="tab-bar-section fixed-bottom bg-white">
   <ul class="f-between-center px-4">
     <li>
       <a
@@ -251,7 +495,7 @@
     <li>
       <a
         href="statistics.html"
-        class="pt-3 pb-1 px-3 "
+        class="pt-3 pb-1 px-3 d-none"
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/chart_default-68b8566f.svg"
@@ -262,7 +506,7 @@
 
       <a
         href="statistics.html"
-        class="pt-3 pb-1 px-3 d-none"
+        class="pt-3 pb-1 px-3 "
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/chart_selected-e741477c.svg"
@@ -745,7 +989,9 @@
     },
   });
 </script>
-            
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    
+    
+  </body>
 </html>
