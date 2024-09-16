@@ -35,7 +35,7 @@
     
   </div>
 </div>
-    <div class="accounting-receipt-section">
+    <div class="accounting-receipt-section pb-14">
       <!-- calendar -->
 <div class="calendar">
   <div class="calendar-header">
@@ -906,6 +906,20 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../assets/js/accounting-modal.js"></script>
+
+<script>
+  swiper = new Swiper(".category-swiper", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+</script>
+
 
       
 </body>
