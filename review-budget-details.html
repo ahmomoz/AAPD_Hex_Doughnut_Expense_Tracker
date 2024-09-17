@@ -2,17 +2,22 @@
 <html lang="zh-Hant-TW">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/image_app-8a2b377b.png"
+    />
+    <title>檢視預算</title>
+    <!-- Material icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- Material icon -->
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>搜尋</title>
     <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-77e1728a.js"></script>
     <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/accounting-modal-1a6ebac9.js"></script>
     <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-7ebab68d.css">
@@ -20,7 +25,7 @@
   <body>
     <div
   class="header position-fixed w-100"
-  data-page="搜尋"
+  data-page="檢視預算"
   style="z-index: 200"
 >
   <div class="bg-white py-3 shadow position-relative">
@@ -37,161 +42,12 @@
     
   </div>
 </div>
-    <div class="accounting-search-results-section pb-14">
-      <div class="px-4">
-        <div class="position-relative">
-          <input
-            type="search"
-            class="form-control"
-            placeholder="請輸入關鍵字"
-            value="銀行">
-            <a href="#" class="position-absolute top-0 end-0 mt-2 me-4">
-              <img
-                src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/search_pressed-7b211d33.svg"
-                alt="icon-search"
-                style="width: 24px; height: 24px;"
-              >
-            </a>
-        </div>
-        <div class="tag-wrap mt-2">
-          <a href="#" class="badge badge-sm badge-gray-100 active">全部(5)</a>
-          <a href="#" class="badge badge-sm badge-gray-100 ms-2">名稱(3)</a>
-          <a href="#" class="badge badge-sm badge-gray-100 ms-2">類別(1)</a>
-          <a href="#" class="badge badge-sm badge-gray-100 ms-2">備註(1)</a>
-        </div>
-      </div>
-      <div class="mt-4">
-        <div class="f-between-center px-4 bg-surface-dark-gray">
-          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">7</span> 月<span class="font-Nunito fw-semibold"> 10</span> 日<span class="ms-2">星期三</span>
-          </p>
-          <div
-            class="font-Nunito text-white fw-semibold d-flex align-items-center py-1"
-          >
-            <p class="">-$ 150</p>
-          </div>
-        </div>
-        <div class="bg-white border-bottom f-between-center py-2 px-4">
-          <div class="d-flex align-items-center py-tiny">
-            <div class="flex-shrink-0">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARZSURBVHgB7ZpPTxNBFMDfDq0m1mI3/DlQD1sPhEQjxYMn/rReNTF+ABP5BMAnAD4B7ScQ9eTJCx40UQrlAiZSjBjkIPWAB8DshlISW9j1veluQ8t2dwotbBN+yWanuzPtezPz3rw3UwnOSG43HdOZEWVMGjHAiEoghfBxSLC5hleWLl3X15jOUsGuoRScAameyqo6H/KBbwyL4yAurKAgUhZvqSIUp2U5nhVvJ0BJ8LZJrD4OFwAqMyuqiKsCB2p6zACYggb3uBs0IvqxPt3eOTzrXM+BnLo4c1G9XgtUJHFTHpyo/d4Gc66/w2IMvEHmCI7iOKW06hfMrrYf/PPgHeGJqNmhpzilAE0bcovgPWIH6tJM9cOKKbS/t/hCapNegofRdWPiVsdwwvpcVgDnvUJTB3tfAW+joT1ELHsoTyEUfrIFhCdCJKv1gY8A9T4ayRa0EDgKMo0CH4GTGjWKYvEfbG6uQTa7AYf5fWg0GD/x9YmPAFr3VqOmz+7ONqyvf4EdvJ9EifRBROmDru4wNAgtKA/JEkWV4IN5OAel3v4Gmz/XeNmJQCAId+89hO6uHrgRaIdzEvfpTI8x+/XMlVq97UQ+n4OV5U+8fN5RQZca9THG+utpJNrbfv916O29z8tU365udmuDX9aohMMR3k4USYKYD41AMUCc9e8rXCA3Bh4MgoK9S5BQmcxSzbrWqJDC0YEhEIVJrJ+h8ArUQaFQEKrn918rl2W5U6hNoSj23RboeDDobFKcT7YRICPFHlpe+QxNgivQFDR1Dz5+eAvN5mzux0PUPQLh2xHQtD0omraQPyytsoEbJZ9eQG9jeRzrmVWHjPma6WWq2/HvRi/UfAXCd/jFhUDv8X7uNS/HHz3lCxN5qdL8D8LjJ8/5u7m5NzycIC9D7tKu3Vlp+Sl0pcBlc6XAZUMKaNC6aNK+uriFu1+KaAsK5P5s/+Jl8vcqrrhEtxkS59Fdkpskn2/FQFa4Ta6Vwgu7dkQPumcrghUkg9GolAHBgI4Ez6ymbd9V5wQkZPUzUoyuWu2oHAp1VCjlhGEYvxkmBQsgiGgkeh4OqxR0AhXIYD7DR6AlQeFTDBPjFAgYMk0JioGazQGOgFteTWAukCXZuRvFY56kW4PVr0t8m6TZ/FhfgeVl9/wB8/gU3a2NLdpOV50akNewvE+zoWAx5JLFmduL2fLeaO5vOoFqjUELQEdQeOgxSuXySnzEjqagBRY1mvt0fmZ9LitA+4w6GNPgfSoO/ypioVsy7rvr4GrQl0iyXa489LM9I8upaa8dMREZdJsD1Q9to1G08GfUALxDig757F44H7N6wzMlsedrHvU65gPBjqFxtPpRsny4YPA3NXSXE07CE64JDRnNMRzHDd14BRdHEn8zgr4+4Vax3j97KG162xSqPVJPDiGC2eNJnOsJuwPtWtSlwEnQU8UwhoqZ2/MKnfCYf7lxhYQFyqYwF8G1Z4Hh3Qwq6+Y/ZKzfSHOZTQcAAAAASUVORK5CYII="
-                alt="category-bank"
-                style="width: 48px; height: 48px"
-              />
-            </div>
-            <div class="flex-grow-1 ms-2">
-              <p class="fs-6">國泰世華銀行</p>
-            </div>
-          </div>
-          <div
-            class="font-Nunito text-red-600 fw-semibold text-end py-tiny"
-          >
-            <p>-$150</p>
-            <span
-              class="fs-9 text-white fw-normal bg-gray-300 rounded-pill text-center mt-1 px-2"
-            >
-            信用卡
-          </span>
-          </div>
-        </div>
-      </div>
-      <div class="mt-3">
-        <div class="f-between-center px-4 bg-surface-dark-gray">
-          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">7</span> 月<span class="font-Nunito fw-semibold"> 2</span> 日<span class="ms-2">星期二</span>
-          </p>
-          <div
-            class="font-Nunito text-white fw-semibold d-flex align-items-center py-1"
-          >
-            <p class="">+$ 200</p>
-          </div>
-        </div>
-        <div class="bg-white border-bottom f-between-center py-2 px-4">
-          <div class="d-flex align-items-center py-tiny">
-            <div class="flex-shrink-0">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVVSURBVHgB5ZrdbhtFFMfPjNcfIQ52CkmVkpZNVRXUIuKCBBhuwhOUXKYVInmCtk/Q5glanqCpUHDvGp6A3FRWikidCCIVAdnSQlRCqaM2zdpe73DO+iNrxx9r76zrDT8p8ma9u5q//2fOzJkdBpIopL+Z4iKQ4AqbBGAJECIuAFTnTxBZxrgGAjTTLK6ZYC4Hk18ugwQYuICEKQHlKyHEF/ioOEiHhLMlo2jcciO4K5FlcVeFgCnoHeiwOa8kLy5Ah3QkMn93MREM8us9FlePljPh84HkjOb0Bu70QnHv9iVF4fdfsUBCDXPYFD+krjq9oa2T4v7NOBQid/pAXAPYEgvtzbFzc9mWV7X6UqRTquDwPXSUJXtO2/BtKtInAiu0FNq0T4oAuwP+EEioYWyv1bUa0FCkWLl9HQfzBPgJam9+oGEyOhCuRnpxlnN+E3yKCWJa+fjCkv1cjUif9cMmsCxm3Al7xq0NVwZktwq+RsRNPXTZfqbqZNnFTTgU1Lq572TJxUNCrZtVkYJ5O6MxDKPm2P6/FzAeuFQZUiyRxsq3WCp51xefZXfg7r1V+OPPLet/+lxZXYPnL3bBO0Tc0CPWMGiJDAh2Hjxi68nfsLr+8wH3dD1nnd/+5yl4BWdU55ZFehWqJHDjwa9NvyfR6xsPPBOKBbdlHi/HrQqSoYa3Emhn45ffvOqjKulTDF1JBBxXlc6gUKSGOyESCcPJt4+DoijgCS9DKj6aqwLkQY78uP5TS2cGUFh0cBBOjI/B2NHR6nlKREPRQZBJkUNCMdFSV6tZdWw+fGQ52QoSZhdHfff38n3k6gT+yQL7ZVxqjFAjK8NEO8jpR3jtXyjQ/qOQ2LGjIxjGEZACLo1KFek00VhJqUWyoed8MPkeyEJayqEB/9nOjqNrn+++bNlnh+MxkIk0J7eebIMbKLsef2sMTuCf7Ewr7WlOXawnHovBSXUchmP77lFU6LlcTXJygxSRL3Z322ZUO6NvHLHCdeTNIwfEbT58XP3BRvA6Ga5KEVkodDZbieJYeDo6YR1Xsixl5fp+uoc/3FC0T0R2A7m2/fRfqy83S0L4ogdk8EpEtpu4N+qnbpAicqDDgXuvSf+VLa6CgnVWFlxCk+wgJohCl5WEV+IqKFhYZgW4n72O4/hG89ZOqBdnT0JnTp+ysq9bsPjQlEIAMoqEMoQG8cfYOCduHsPxbxQFUCVCNMqwQ9HXQAYCuKYEg3lN5N1Phmk8c+omhTdAuOnwQZWIrAm6EtEznNYmmQANJECNG4693vY6EkQ/Bi1uUdVhF0gTAImllkb6rAk6vj/4DiTx/tl32wol5+rFEdRHz7xzCmTBGCzTZ0mkYEsgCQpbKpM6cYPuoes/nDwrd3JulMyznkhxK/LhrMxtKhS6lGDIMZqL2ue2wbKQSuVxTGaRvI/GPi293aqOHcX04jXGuWevCmgSHwmHq07puu6FsCoYqgvso5k5Oq4WzTySv0Gbg8AjaLiwh6KXAgm9CPOV46pIykLCFF/DIYBctO8fqFn+8NrNHqHZXSRqRJKbuEQ5Bz7GNGG+fhfIgYUset8uhD/DltqtJGcW6s83XK3j4dw1vCUDfoKxTOCTC5cbfdVQpDXVM9k0HmrgD7RcUUw3+/J/se2s5eIywxtZSD9HG/WgH8G5KbWv3bZQx9VyMZ3CGVH/bJ7AJHMF++ANJ9d2tCTQF+GL7hkF80ros4uOE2NX6x5GOjXLeY83NqG4Ig7yweTMMnSIy432qSkOYhbD+Ly3G+3hVjfiKkh7/1oSbE4xHpjEeYcKlssdCdfKojKmIdZM/HQjzM5/qfGANCYjR+MAAAAASUVORK5CYII="
-                alt="category-life"
-                style="width: 48px; height: 48px"
-              />
-            </div>
-            <div class="flex-grow-1 ms-2">
-              <p class="fs-6">發票</p>
-              <p class="fs-8">中國信託銀行</p>
-            </div>
-          </div>
-          <div
-            class="font-Nunito text-green-500 fw-semibold d-flex align-items-center"
-          >
-            <p>+$200</p>
-          </div>
-        </div>
-      </div>
-      <div class="mt-3">
-        <div class="f-between-center px-4 bg-surface-dark-gray">
-          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">6</span> 月<span class="font-Nunito fw-semibold"> 20</span> 日<span class="ms-2">星期四</span>
-          </p>
-          <div
-            class="font-Nunito text-white fw-semibold d-flex align-items-center py-1"
-          >
-            <p class="">-$ 2,000</p>
-          </div>
-        </div>
-        <div class="bg-white border-bottom f-between-center py-2 px-4">
-          <div class="d-flex align-items-center py-tiny">
-            <div class="flex-shrink-0">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASzSURBVHgB7ZpdbhpXFMf/ZzwkWMUSSKYqD5Ygil31oQnkzY4qkRXUs4ImK4izAscrSLqCOisAVmCkqiVPsfNUydhhVB5clUggQQONYW7uuQmEbw8zYBiSn4TmMl+6/znn3nPmzCVMiVT+9yRAcdJW7sKiOEgE5e6o7RuQqMDSTBBMIVqvAStrbP6UxRQguICFkab/AohdCApi2rBwQWkhmi/cCHYkUokjfV82k7gu2MIt68DYun+ICZlIZOr0D+mO2jNcp7h+WOx7PDB+2DbtXqLZPTFTePlYCjzGPAUyAlHyoZA5z+3bveRKS6aOj4O01khh3uKGIsdr9eYjI5GojD1r3MHUX7ko3cARPz0sKjbcd6RITwhsc4XQkWOSblDKEwIZHqc6pXhoDTs8VGTm/OUzCBGHlyAR1wL1oZPRgLvKMPFQzqK/waOIljCM73fS3ft6RHpqHI6EKnLGjXXPuD3uKuPPvrcFMjJnDrzb697TsaSyogyyWAp6rdmxpLLi0tBrzY4l0+e5ghNXvbxsovT2X9Ve9a8iEFiDz6fDKXy/Wq2KeqMOn+6T9wtgdXUVk/PZmqo3qbM/d50IrNfreHX8Co1Go2d/KBRCeD2M9fV1Wx3k6y8uLlAul1GulHuO+f1+3EvccyCUrVnjMJhVIgn0MxxQKBQGBDKqs/J3mj9VgiPfRRCJRAbOK5VKKBaLA8K64fvnz/K48+MdTAyt7KItUqpMSktOzLjOdc75JPhN4U3HIqM8YBTVahVOIFLG29NShaPgdYQN5ZL/XKg2b+0KdIXUxamehqbfW+nbpHzzLqpBWFEsN3FdjscopsDGxoaa7tuwO/LENHeIgs4DWh+hoAwb4XDPPp45m80m5ouYnkgOF6W3pc7/Rr2xAAI/MjWR7YC+iExNZP+YZBZlXM50TDKLMC5nNiaZRRmXX8SYtF1B9zJfRS4LGjSqYMnR0BILL9Knu5gfBUzprr4TOGTY2/4sCIe/hWPIMnX4/jPR8sMJt2K3VBzk0DGLeKhLC/KDjMVicEwtcKKqdemzHOdeUbiARVZllY3rNhVZ7qjWagPncGf5wXApZFi6FwrK2tPamsqe1uSWi1guMXdvb8eUswuIjCxmPYYL+Klz5/jHcHLAtZ1i8e+OYC5Zdm8ZFsbuyBbT9anlJm2yqm+qKSgtX55dieyHrcAd5x8L5uIVV+6YtiD1YD7tmwXy40+Gt8pduZhF1s3CTJapzA/lqtxQyYARe1ARFv2K5SLbbnzOePTGc7U4aEkQlzhotzsil8yah93rB3pz1+WwptltRaZHpLKmwCN4GGHhoH8VyMBbiHF7Jy3jpifdlvttbG0f9u8f/qq18v9T6baOc9q5IOhEGmhv2KGhIpXbvidDNk14A1M0hTHq4NXLznw4Amb/1csFPNGMXXY2tjLAF4qVRkL6QhqLSVZU/YmrloXaXu+ayueeEi3O4gkhxBNjc+e5nXMnW9S7GO6bFZb1xNi6b3tidLY8+zT3kDRl1Siuj6yM4QfG5nYWE+JyoX0uKf2GBctv87N4g5HZF1FaBvgXTsS1cSWyGyUYVpKI7qoPu2odwkTCzY8pJZ0IS7zmrRth3XwAYJsR0pVQe8MAAAAASUVORK5CYII="
-                alt="category-learn"
-                style="width: 48px; height: 48px"
-              />
-            </div>
-            <div class="flex-grow-1 ms-2">
-              <p class="fs-6">獎學金</p>
-            </div>
-          </div>
-          <div
-            class="font-Nunito text-green-500 fw-semibold text-end py-tiny"
-          >
-            <p>+$1,000</p>
-            <span
-              class="fs-9 text-white fw-normal bg-gray-300 rounded-pill text-center mt-1 px-2"
-            >
-            銀行
-            </span>
-          </div>
-        </div>
-        <div class="bg-white border-bottom f-between-center py-2 px-4">
-          <div class="d-flex align-items-center py-tiny">
-            <div class="flex-shrink-0">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARZSURBVHgB7ZpPTxNBFMDfDq0m1mI3/DlQD1sPhEQjxYMn/rReNTF+ABP5BMAnAD4B7ScQ9eTJCx40UQrlAiZSjBjkIPWAB8DshlISW9j1veluQ8t2dwotbBN+yWanuzPtezPz3rw3UwnOSG43HdOZEWVMGjHAiEoghfBxSLC5hleWLl3X15jOUsGuoRScAameyqo6H/KBbwyL4yAurKAgUhZvqSIUp2U5nhVvJ0BJ8LZJrD4OFwAqMyuqiKsCB2p6zACYggb3uBs0IvqxPt3eOTzrXM+BnLo4c1G9XgtUJHFTHpyo/d4Gc66/w2IMvEHmCI7iOKW06hfMrrYf/PPgHeGJqNmhpzilAE0bcovgPWIH6tJM9cOKKbS/t/hCapNegofRdWPiVsdwwvpcVgDnvUJTB3tfAW+joT1ELHsoTyEUfrIFhCdCJKv1gY8A9T4ayRa0EDgKMo0CH4GTGjWKYvEfbG6uQTa7AYf5fWg0GD/x9YmPAFr3VqOmz+7ONqyvf4EdvJ9EifRBROmDru4wNAgtKA/JEkWV4IN5OAel3v4Gmz/XeNmJQCAId+89hO6uHrgRaIdzEvfpTI8x+/XMlVq97UQ+n4OV5U+8fN5RQZca9THG+utpJNrbfv916O29z8tU365udmuDX9aohMMR3k4USYKYD41AMUCc9e8rXCA3Bh4MgoK9S5BQmcxSzbrWqJDC0YEhEIVJrJ+h8ArUQaFQEKrn918rl2W5U6hNoSj23RboeDDobFKcT7YRICPFHlpe+QxNgivQFDR1Dz5+eAvN5mzux0PUPQLh2xHQtD0omraQPyytsoEbJZ9eQG9jeRzrmVWHjPma6WWq2/HvRi/UfAXCd/jFhUDv8X7uNS/HHz3lCxN5qdL8D8LjJ8/5u7m5NzycIC9D7tKu3Vlp+Sl0pcBlc6XAZUMKaNC6aNK+uriFu1+KaAsK5P5s/+Jl8vcqrrhEtxkS59Fdkpskn2/FQFa4Ta6Vwgu7dkQPumcrghUkg9GolAHBgI4Ez6ymbd9V5wQkZPUzUoyuWu2oHAp1VCjlhGEYvxkmBQsgiGgkeh4OqxR0AhXIYD7DR6AlQeFTDBPjFAgYMk0JioGazQGOgFteTWAukCXZuRvFY56kW4PVr0t8m6TZ/FhfgeVl9/wB8/gU3a2NLdpOV50akNewvE+zoWAx5JLFmduL2fLeaO5vOoFqjUELQEdQeOgxSuXySnzEjqagBRY1mvt0fmZ9LitA+4w6GNPgfSoO/ypioVsy7rvr4GrQl0iyXa489LM9I8upaa8dMREZdJsD1Q9to1G08GfUALxDig757F44H7N6wzMlsedrHvU65gPBjqFxtPpRsny4YPA3NXSXE07CE64JDRnNMRzHDd14BRdHEn8zgr4+4Vax3j97KG162xSqPVJPDiGC2eNJnOsJuwPtWtSlwEnQU8UwhoqZ2/MKnfCYf7lxhYQFyqYwF8G1Z4Hh3Qwq6+Y/ZKzfSHOZTQcAAAAASUVORK5CYII="
-                alt="category-bank"
-                style="width: 48px; height: 48px"
-              />
-            </div>
-            <div class="flex-grow-1 ms-2">
-              <p class="fs-6">台北富邦銀行</p>
-            </div>
-          </div>
-          <div
-            class="font-Nunito text-red-600 fw-semibold text-end py-tiny"
-          >
-            <p>-$3,000</p>
-            <span
-              class="fs-9 text-white fw-normal bg-gray-300 rounded-pill text-center mt-1 px-2"
-            >
-            無限期
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <nav class="tab-bar-section fixed-bottom bg-white">
+ <nav class="tab-bar-section fixed-bottom bg-white">
   <ul class="f-between-center px-4">
     <li>
       <a
         href="index.html"
-        class="pt-3 pb-1 px-3 "
+        class="pt-3 pb-1 px-3 d-none"
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/home_default-0be4515a.svg"
@@ -201,7 +57,7 @@
       </a>
       <a
         href="index.html"
-        class="pt-3 pb-1 px-3 d-none"
+        class="pt-3 pb-1 px-3 "
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/home_selected-1b7def18.svg"
@@ -213,7 +69,7 @@
     <li>
       <a
         href="accounting-receipt.html"
-        class="pt-3 pb-1 px-3 d-none"
+        class="pt-3 pb-1 px-3 "
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/details_default-8edeb0e8.svg"
@@ -223,7 +79,7 @@
       </a>
       <a
         href="accounting-receipt.html"
-        class="pt-3 pb-1 px-3 "
+        class="pt-3 pb-1 px-3 d-none"
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/details_selected-cce88395.svg"
@@ -913,6 +769,170 @@
 });
 </script>
 
+
+    <div class="review-budget-details pt-13 pb-14">
+      <div class="container px-4">
+        <div class="section-block py-5 px-6">
+          <!-- card head -->
+          <div class="d-flex mb-5">
+            <!-- category image-->
+            <img
+              src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-food-dbe632d7.svg"
+              alt="category-food"
+              width="32"
+              height="32"
+              class="me-1"
+            />
+            <!-- category -->
+            <p class="fs-5 fw-bold">飲食</p>
+          </div>
+          <!-- card body -->
+          <div>
+            <div class="d-flex f-between-center mb-3 flex-wrap">
+              <!-- budget count -->
+              <p>
+                <span class="fs-8 text-gray-600">剩餘 </span
+                ><span class="font-Nunito fw-bold fs-3">$7,500</span>
+              </p>
+            </div>
+            <!-- progress bar -->
+
+            <div
+              class="progress mb-3"
+              role="progressbar"
+              aria-label="progress bar"
+              aria-valuenow="28%"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="height: 12px"
+            >
+              <div class="progress-bar" style="width: 28%; height: 12px"></div>
+            </div>
+
+            <!-- budget count details -->
+            <div class="fs-9 text-gray-600">
+              <p>
+                已用：<span>$2,500</span>
+                <span>/ $9,000</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <table class="table mt-5 table-hover" style="background-color: #f7f7f7">
+          <thead>
+            <tr>
+              <th class="py-3 px-4" scope="col">支出</th>
+              <th
+                scope="col"
+                class="font-Nunito fw-semibold text-end py-3 px-4"
+              >
+                $2,500
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+  <td style="width: 80%" class="py-3 px-4">
+    <div>
+      <p class="fs-8 mb-2">
+        早餐
+        <span class="font-Nunito fs-10"
+          >6%</span
+        >
+      </p>
+
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="progress bar"
+        aria-valuenow="6%"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="height: 8px"
+      >
+        <div
+          class="progress-bar"
+          style="width: 6%; height: 8px"
+        ></div>
+      </div>
+    </div>
+  </td>
+  <td class="text-end py-3 px-4">
+    <p class="spent-amount font-Nunito fw-semibold">
+      $150
+    </p>
+  </td>
+</tr>
+          </tbody>
+          <tr>
+  <td style="width: 80%" class="py-3 px-4">
+    <div>
+      <p class="fs-8 mb-2">
+        午餐
+        <span class="font-Nunito fs-10"
+          >32%</span
+        >
+      </p>
+
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="progress bar"
+        aria-valuenow="32%"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="height: 8px"
+      >
+        <div
+          class="progress-bar"
+          style="width: 32%; height: 8px"
+        ></div>
+      </div>
+    </div>
+  </td>
+  <td class="text-end py-3 px-4">
+    <p class="spent-amount font-Nunito fw-semibold">
+      $800
+    </p>
+  </td>
+</tr>
+             <tr>
+  <td style="width: 80%" class="py-3 px-4">
+    <div>
+      <p class="fs-8 mb-2">
+        晚餐
+        <span class="font-Nunito fs-10"
+          >62%</span
+        >
+      </p>
+
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="progress bar"
+        aria-valuenow="62%"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style="height: 8px"
+      >
+        <div
+          class="progress-bar"
+          style="width: 62%; height: 8px"
+        ></div>
+      </div>
+    </div>
+  </td>
+  <td class="text-end py-3 px-4">
+    <p class="spent-amount font-Nunito fw-semibold">
+      $1,550
+    </p>
+  </td>
+</tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
 
     
   </body>

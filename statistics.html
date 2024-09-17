@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/image_app-8a2b377b.png"
+    />
     <title>統計</title>
     <!-- Material icon -->
     <link
@@ -13,12 +18,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/statistics-8138a714.js"></script>
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-9aa5696a.js">
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/income-hide-8b7b19c1.js">
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/calendar-e7eb4b40.js">
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-1e830aac.js">
-    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-a7748a75.css">
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/statistics-c8d60cd9.js"></script>
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-77e1728a.js">
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/accounting-modal-1a6ebac9.js">
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-687fa0d0.js">
+    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-7ebab68d.css">
   </head>
   <body>
     <div
@@ -91,7 +95,7 @@
                   <!-- Income Card -->
                   <div class="d-flex mb-5">
                     <div class="w-50 me-2">
-  <div class="bg-surface-second radius-l py-4 px-5 income-card">
+  <div class="bg-surface-second radius-l py-4 px-5 income-card h-100">
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">本月收入</p>
       <img
@@ -109,10 +113,8 @@
     </p>
   </div>
 </div>
-
-
  <div class="w-50 me-2">
-  <div class="bg-surface-second radius-l py-4 px-5 income-card">
+  <div class="bg-surface-second radius-l py-4 px-5 income-card h-100">
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">總存款</p>
       <img
@@ -130,8 +132,6 @@
     </p>
   </div>
 </div>
-
-
                   </div>
                   <!-- 年度存款 -->
                   <div class="mb-6">
@@ -245,7 +245,7 @@
                           <!-- Income Card -->
                           <div class="d-flex mb-5">
                             <div class="w-50 me-2">
-  <div class="bg-gray-50 radius-l py-4 px-5 income-card">
+  <div class="bg-gray-50 radius-l py-4 px-5 income-card h-100">
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">總存款</p>
       <img
@@ -263,8 +263,6 @@
     </p>
   </div>
 </div>
-
-
                             <!-- card 2 -->
                             <div class="w-50 me-2">
   <div class="bg-gray-50 radius-l py-4 px-5 income-card">
@@ -403,7 +401,7 @@
                         >
                           <div class="mb-6">
                             <div class="w-100 me-2">
-  <div class="bg-gray-50 radius-l py-4 px-5 income-card">
+  <div class="bg-gray-50 radius-l py-4 px-5 income-card h-100">
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">本月總收入</p>
       <img
@@ -421,8 +419,6 @@
     </p>
   </div>
 </div>
-
-
                           </div>
 
                           <!-- Chart -->
@@ -1188,7 +1184,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../assets/js/accounting-modal.js"></script>
+
 
 <script>
   swiper = new Swiper(".category-swiper", {
@@ -1203,6 +1199,32 @@
 });
 </script>
 
+    <script>
+      const eyeIcons = document.querySelectorAll(".income-card .eye-icon");
+      const incomeText = document.querySelectorAll(".income-card .income");
+
+      eyeIcons.forEach((item) => {
+        const income = item
+          .closest(".income-card")
+          .querySelector(".income span").innerText;
+        item.addEventListener("click", (e) => {
+          let isShow = item.dataset.show;
+          if (isShow === "true") {
+            item.src = "../assets/images/icon/eyes/eye_grey_no.svg";
+            item.setAttribute("data-show", "false");
+            item
+              .closest(".income-card")
+              .querySelector(".income span").innerText = "----";
+          } else {
+            item.src = "../assets/images/icon/eyes/eye_grey_yes.svg";
+            item.setAttribute("data-show", "true");
+            item
+              .closest(".income-card")
+              .querySelector(".income span").innerText = income;
+          }
+        });
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     

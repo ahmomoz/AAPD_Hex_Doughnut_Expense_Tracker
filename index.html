@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首頁</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/image_app-8a2b377b.png"
+    />
+    <title>記帳甜甜圈 | 首頁</title>
     <!-- Material icon -->
     <link
       rel="stylesheet"
@@ -13,11 +18,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-9aa5696a.js"></script>
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/income-hide-8b7b19c1.js"></script>
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/calendar-e7eb4b40.js"></script>
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-1e830aac.js"></script>
-    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-a7748a75.css">
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/index-e2063f45.js"></script>
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-77e1728a.js">
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/accounting-modal-1a6ebac9.js">
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-687fa0d0.js">
+    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-7ebab68d.css">
   </head>
   <body>
     <!-- Header -->
@@ -46,7 +51,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content mx-auto border-0" style="width: 50%">
+        <div class="modal-content mx-auto border-0" style="width: 70%">
           <div class="modal-header border-bottom-0 pt-6 pe-6">
             <button
               type="button"
@@ -75,7 +80,7 @@
       <div class="container px-4">
         <div class="d-flex mb-5">
           <div class="w-50 me-2">
-  <div class="bg-surface-second radius-l py-4 px-5 income-card">
+  <div class="bg-surface-second radius-l py-4 px-5 income-card h-100">
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">本月收入</p>
       <img
@@ -93,8 +98,6 @@
     </p>
   </div>
 </div>
-
-
  <div class="w-50 me-2">
   <div class="bg-surface-second radius-l py-4 px-5 income-card">
     <div class="d-flex mb-3 align-items-center">
@@ -113,7 +116,7 @@
     </div>
 
     <!-- fs-5 -->
-    <p class="font-Nunito text-gray-950 fw-bold fs-5">存下 $8,000</p>
+    <p class="font-Nunito text-gray-950 fw-bold fs-5">存下$8,000</p>
   </div>
 </div>
         </div>
@@ -121,9 +124,27 @@
         <!-- chart -->
         <div class="mb-4">
           <div class="d-flex justify-content-end">
-            <img src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/graph_default-323314f9.svg" alt="" />
+            <img
+              src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/graph_default-323314f9.svg"
+              alt="graph icon"
+              class="switch-graph-icon default-icon"
+              style="cursor: pointer"
+            />
+            <img
+              src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/graph_pressed-31880cae.svg"
+              alt="graph icon"
+              class="switch-graph-icon d-none pressed-icon"
+              style="cursor: pointer"
+            />
           </div>
-          <canvas id="budget-pie-chart"></canvas>
+
+          <canvas id="budget-pie-chart" class="graph"></canvas>
+
+          <canvas
+            id="home-total-expense-pie-chart"
+            class="graph d-none"
+          ></canvas>
+
           <div>
             <div class="d-flex flex-column font-Nunito align-items-end">
               <p><span class="dot bg-gray-200 me-1"></span>已用：$12,950</p>
@@ -133,7 +154,7 @@
         </div>
 
         <!-- Budget List -->
-        <div class="bg-white radius-xl pt-6">
+        <div class="bg-white radius-xl pt-6 overflow-hidden">
           <div class="d-flex align-items-center">
             <p class="ms-6 fw-bold fs-6 me-1">各類別預算</p>
             <img
@@ -145,13 +166,13 @@
           </div>
           <ul>
             <!-- Food -->
-            <li class="budget-card-wrapper py-5 px-4">
-  <a href="category-food-details.html">
+            <li class="budget-card-wrapper py-5 px-4 list-hover">
+  <a href="review-budget-details.html">
     <div class="budget-card d-flex align-items-center">
       <div class="me-4">
         <!-- category image-->
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATTSURBVHgB3ZvNbhtVFMf/1x9poB82ctTQpEmdVEoqBKmDAgtYNF4gdkDXLEifoPAEJU9A+wSUBTukBlYgJByoYFEqJQVUESQUk4TQSqlwBG1TO57bc+5knLE7dsZzr50Z/yRnJuPxZP4+595z7pkTAUPI9cIsBHIQ8fOQMkeH0vTKtnGJEr2KEKIIq3qH9hfFSH4RBhDQQAmLxT8gUe/BFmWaEoleINGf6QgOJNK2WvwK7c2iWwiyctWaF6P562iTtkTKjQK5YfyTroprhMWWrbwYyxf9fiTm90S5efMynb50qALVjdA4T8ZW5d83r/j9yIGWlKuFNJLxG4cuzgser+XqJbJqqeVprd4kgfytFdDeLNldfLhvU5GREOhwgNDmYzIZIxeNgEDGHqc31NDywFOk3PiBZlDkEC1yNHd4TkbPuCuFiTnS/imiimVdpFi64D5UJzJS47A5JVSsMfeMW++ufcrcWUSbNBL40H2gJlJZUco5aLLz6D/89fttPKGtm/trK3i4vVV37OH2A3XcOCJ22T0J7VuyL+47g2gF3/Taym3cc908C/9jqYC7t76pO3dl6Tt1vPELMUCdNfdFyu5nNNVKGR3DZU0lUq4VeKmURW/B1lRh0LZkPP4uDDFwagxHT2Tw4uhk7VgieQSpzBCGx1+pO5d/5+NHnj+ODsHGs0OI3Ph+Fb1nSZXuieELY8JeZcT+hSG2tzaxdW8V1bL/8caWZMt3xKIV64WE47e6ODMoiwwCz8hDZ6dw9uU3YJQksgkyaRaasMBff/xKbXXY/PMXmnGfYGI6D4PkEiqD1ypn2VbYMRTrOM7+T0nDsdQABsmFeWLSJJ2AAR78U4RJOBNysiFtF5ZI+67xNIMtuEsuZhIOOWcmZ9SWXZjHutb1oAnfyODIJEwSp2uOnpvBSXLXpcUvlEXZbQdHg/0dAyL7MPGq0YmiRj+FlHFyVbbk/fWVwxPJ7vrzt5/DJCzutbfeV/sZyqASv/2kQhMPC/acdtEek52GPYVfTNCEPvQimV3N1UroRfJCm92UXTho2hdqkSzOWWhnTmURFCPJQCfgCe3ura/Vlq04PD6FoHDuWkLIcM/YLHDqzXe0VihsydCJZDhUnByZwJlzM4HCRg1aU7LIZYSM1MAQXnr9bT1xDhLFGCr0sEQDdqd+w4vd/ueOmxHI7GI5tldpLkKDxtqNLuyiRuDyB+mzQ4i0voQGvBwKmlc2wssqc2UQucg/nTi5AE14Nc/Lo6Cu68yi/IUZoyqV8exqnV3M4oqdkTYVTqZ3HvuvFBw7MYCjqQyMslep412VDLDfyvXCNao6G3lUwLNjCoeN7arMflq3i6sIacwMRFnOO7s1kWqWldY19AJCXnf3D9Qn6L1gTdUksW9Fpk6ksqZlXUKU4da0hi6QZ5Za6nl7VN2W7tur986zrLwXUrgOGKUOkGVx+sK01xuei2blthXrIjTTva7B49C+3yZvt6BX2s5alj/UByvWtGrUCyUU8MvW9EFtob4f9VBG9LGpjMgM1kfidP6qnzPba+oNhftyuiZZoO/FfrD2bLs1rcuNTSROyvkgvej6jfYCcySYGys61GgvF2DJ7jfae6EEA7OIifPqwS4EvdoRLotQoqjmJOUdusayqX+ZeAqj4tPmoCoHHwAAAABJRU5ErkJggg=="
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-food-dbe632d7.svg"
           alt="category-food"
         />
       </div>
@@ -206,13 +227,13 @@
   </a>
 </li>
             <!-- Shopping -->
-            <li class="budget-card-wrapper py-5 px-4">
-  <a href="category-shop-details.html">
+            <li class="budget-card-wrapper py-5 px-4 list-hover">
+  <a href="review-budget-details.html">
     <div class="budget-card d-flex align-items-center">
       <div class="me-4">
         <!-- category image-->
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATWSURBVHgB5ZvfbhtFFMa/WTtNSSMSF6IgBGIDpWoB1Y6UC5yKkgqVGy6SPgHtE5Q+QdsnaHkC2icg3MJFLBBJhSo1QYhCgdQlCBUBddLaSeTEOz1nvZuunbWz9hzH3vYnOXb2jzXfnplzzpwZKwjxXUFPKSCTSCCtNDIaGKbDdtT76fpVC8hDIV+pYMkBch+kVA4CKBjAwpIJfKo1ZlRVlCgsXCnMbldww0RwWyI9cZeoFVPYP/KOgysnU+o6WqQlkd8XdMZK4Oo+i6snDwensymVj3qDFfXCm0V9wbJwu8sCGZtafW/hsb4U9YY9LXm7oIc3E/iyB8TtgsdrfwXnx1Nqtel1zU4uFDQ/tTm04CW7wJ7dt6HImAj0aSq04ZhUFnXReAhkbG4vD62wk6Eibz7WVylGZRAjuL0bSYQ6o13dlcLEOfKiXyCmaAdnJ1NqNnisRmTMxmEoJGi138FY0OPWdteEa24bMYZz5nXgs+CxHUt6VryHiJS3tvHn3w/czwf6khgcGMDh4RfRC9RbM7lzppqLRubrb+dRWH1Uc+ytN17DRPo9V3Q3CVjzMv//1JJrmq1oR/werJAVVzxLslULa2soljZw4vhRpN85im4TtKYrcr6gZ7y42Db//Ps/WXeBrNiH118dhQn8HanhIbdnmLBNCQJP0dx+pRKYbqWrhpHyxmN5awt/3P8LEvz486848+EkjfcX0A4JYIbeclXvKpB8szhpiusbmL+1iHah3jnN79ZcNRWyYQiPx07Aw6C4vo42sTnVsw4KpW9bHbCkT8ngAdLjsZNUMLIjz5ybMDryEo4fGRPvtuyE+LsNyLDjsSEAN2Yi/S56DS6wiUXtYAYkyStkxXa9K6MlRd5a+kksdAThVPGTj07BBInh6MLuvhOUy+ZjXExkuUPe9dChAZgiKHIbvYqYyFKp7YDdFBOn4yMistzBRKCPQpMpPS/yQK+IlGhIIwZ7xfEIpF6h8HgcHTkMUyyeQUOAyYk0PXVzJ+HDJRROE7l2ZErSXeiEOdyYM6eyNDV6SK//YAL3jGNvj4kIJPLqB1pzrPCS3DMKl0CsEi+WPMMMAotuT221UheFO78vuyXL0ZGXmxakOOf95bdlNwwdO/KmdO02nx1SY+4shNYPvqJ6yAUIsXTnLhWh7rqfeWZSpGyoUZnyG6rf+qUTvvZjGteCnjrHf9wQQuachSArdfPK5fsroddx7aa+NvSAajpSsPH43RW5Sf1WC4USpj7fbGQZ9qL11XaJ4O+R91e3XJGnucrs4HMIwfHNF8bvJxp0VRY5OZFx4yuLTVP13bSgHCDnf9gJkVya7KcFn05sOuoKtETgL6/vpHXS1uwy14P7B2pyVxqb1yTHZpfgTRJXggdqRLI16YLziDMksH4XyK5ZCHskHdNuy+3Ohuy9C83NPSc0p2K0A4Tauvj+kBoPOxc6n/Sc0FnEJ6/N62p7Q3kutp01rQzwjZsOxrWSTfvE0MgdpPbttS008nyZrHqZHknk7ZedhrrnRXKS16Jc21JRoCe6L1nP0bh4MqUiL0G3Vfkgsec8q9rYL0gcvTgG5tAiRuUdEjtFGRILnu7YRnueBjq4kd3vjfZhsGBatZ5SCmmwhRXsloRrCgPVXw8s0nhb4riXFfrJxBNXcL/joThjYgAAAABJRU5ErkJggg=="
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-shop-2500ad3e.svg"
           alt="category-shop"
         />
       </div>
@@ -267,13 +288,13 @@
   </a>
 </li>
             <!-- Learn -->
-            <li class="budget-card-wrapper py-5 px-4">
-  <a href="category-learn-details.html">
+            <li class="budget-card-wrapper py-5 px-4 list-hover">
+  <a href="review-budget-details.html">
     <div class="budget-card d-flex align-items-center">
       <div class="me-4">
         <!-- category image-->
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASzSURBVHgB7ZpdbhpXFMf/ZzwkWMUSSKYqD5Ygil31oQnkzY4qkRXUs4ImK4izAscrSLqCOisAVmCkqiVPsfNUydhhVB5clUggQQONYW7uuQmEbw8zYBiSn4TmMl+6/znn3nPmzCVMiVT+9yRAcdJW7sKiOEgE5e6o7RuQqMDSTBBMIVqvAStrbP6UxRQguICFkab/AohdCApi2rBwQWkhmi/cCHYkUokjfV82k7gu2MIt68DYun+ICZlIZOr0D+mO2jNcp7h+WOx7PDB+2DbtXqLZPTFTePlYCjzGPAUyAlHyoZA5z+3bveRKS6aOj4O01khh3uKGIsdr9eYjI5GojD1r3MHUX7ko3cARPz0sKjbcd6RITwhsc4XQkWOSblDKEwIZHqc6pXhoDTs8VGTm/OUzCBGHlyAR1wL1oZPRgLvKMPFQzqK/waOIljCM73fS3ft6RHpqHI6EKnLGjXXPuD3uKuPPvrcFMjJnDrzb697TsaSyogyyWAp6rdmxpLLi0tBrzY4l0+e5ghNXvbxsovT2X9Ve9a8iEFiDz6fDKXy/Wq2KeqMOn+6T9wtgdXUVk/PZmqo3qbM/d50IrNfreHX8Co1Go2d/KBRCeD2M9fV1Wx3k6y8uLlAul1GulHuO+f1+3EvccyCUrVnjMJhVIgn0MxxQKBQGBDKqs/J3mj9VgiPfRRCJRAbOK5VKKBaLA8K64fvnz/K48+MdTAyt7KItUqpMSktOzLjOdc75JPhN4U3HIqM8YBTVahVOIFLG29NShaPgdYQN5ZL/XKg2b+0KdIXUxamehqbfW+nbpHzzLqpBWFEsN3FdjscopsDGxoaa7tuwO/LENHeIgs4DWh+hoAwb4XDPPp45m80m5ouYnkgOF6W3pc7/Rr2xAAI/MjWR7YC+iExNZP+YZBZlXM50TDKLMC5nNiaZRRmXX8SYtF1B9zJfRS4LGjSqYMnR0BILL9Knu5gfBUzprr4TOGTY2/4sCIe/hWPIMnX4/jPR8sMJt2K3VBzk0DGLeKhLC/KDjMVicEwtcKKqdemzHOdeUbiARVZllY3rNhVZ7qjWagPncGf5wXApZFi6FwrK2tPamsqe1uSWi1guMXdvb8eUswuIjCxmPYYL+Klz5/jHcHLAtZ1i8e+OYC5Zdm8ZFsbuyBbT9anlJm2yqm+qKSgtX55dieyHrcAd5x8L5uIVV+6YtiD1YD7tmwXy40+Gt8pduZhF1s3CTJapzA/lqtxQyYARe1ARFv2K5SLbbnzOePTGc7U4aEkQlzhotzsil8yah93rB3pz1+WwptltRaZHpLKmwCN4GGHhoH8VyMBbiHF7Jy3jpifdlvttbG0f9u8f/qq18v9T6baOc9q5IOhEGmhv2KGhIpXbvidDNk14A1M0hTHq4NXLznw4Amb/1csFPNGMXXY2tjLAF4qVRkL6QhqLSVZU/YmrloXaXu+ayueeEi3O4gkhxBNjc+e5nXMnW9S7GO6bFZb1xNi6b3tidLY8+zT3kDRl1Siuj6yM4QfG5nYWE+JyoX0uKf2GBctv87N4g5HZF1FaBvgXTsS1cSWyGyUYVpKI7qoPu2odwkTCzY8pJZ0IS7zmrRth3XwAYJsR0pVQe8MAAAAASUVORK5CYII="
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-learn-5bc12a19.svg"
           alt="category-learn"
         />
       </div>
@@ -328,13 +349,13 @@
   </a>
 </li>
             <!-- Transport -->
-            <li class="budget-card-wrapper py-5 px-4">
-  <a href="category-transport-details.html">
+            <li class="budget-card-wrapper py-5 px-4 list-hover">
+  <a href="review-budget-details.html">
     <div class="budget-card d-flex align-items-center">
       <div class="me-4">
         <!-- category image-->
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAV+SURBVHgB1Zttb1NlGMf/pzs14WEPkYF0RulwQ0lE2jhI1BAxMfGl2ycQPgHwCcY+weATiJ9g01e+khpFzcbczEymsLGzIQzJJF0nbbI+3FzXae+t7U7b+5xelPaXLO3OQ3v+53q873PXghCz99VFeomFQjirCojBQh/9HzX+AAtJFODQq6MU/qAtiXPDVgICWGgCFkaivlLAKJQrShYSbilMFxS+aUZwIJEszrIwTm8volWQhQt5TJw/Zd2CT3yJnLmn2B0n0Upx1ZDY7A4+++i05ZieEjI98O6qukIC5/EqBTIK0XAYq3Mratz0lIaWnJ9XffluTOFVi/Nmumsbl+NxK1nvoLoif11S0fBruM13D+2KgfvWFNkRAjUNhNaMSRI41RECGY5TG1McWl67PUVSUE/SiTF0EhZihcMY995Vxdw9dUmF8DU6lTzGRt61pss3VYjsqDisTZIy7mB5xq1wV6o/4x0ukOnLHcbV8g27lnStSEUWQmSzOaw9fIStrVTDY3t7ezBw/BgOHjwAISqsaeutrhWFYIE//HgH6XTG7AS6GSsPHFz4+LyUUG3N6/zPnrtach3NxpN/zQWW4OOXH6xBChpAXNElxRV5d1mNSsYiu2kQ1h/+A0HYmm4Z1Jb8EoKYxKEX7OZ+PaAeZM1Rfi2KFHLV5ZU1/Dbzu3uxQZmbX8TS38uQgES6xrPnV2mUkZdx1XQmg2wuh/7+19EMQT2hGppGiXJc2nRNMaupSZA9Pnj/PbQb2UOI2iFSq4REMpwhNzefkctmEQSumUMnT0jWzJhdsBCV0sjxtB4ws2o2/3vmlqAvPv8UEpCX9hlPfzSCs2KzAss/i8UKISfyuWDqZ5JCyYexIUQmUynywifUoh3Yi6u5hUU3VjW8j4/RcAz/9MvMbvlppgxVIyay2pJr648qkkd1kc/mshWdEYsqFybZFIiJrL7zjeKTj/+rTtGXtKRYTAYtGbVIp9OQQi67ZmQTD3dOUrw0dy1n6GSUinz3vu07dM7in0ue57RlTHK29Oo5efuZOu0eF/7yrKvp7emGFGLuyn1recnQDL1zou55p08N7dsWpknUD+NnIIU1u6Ku0jPASQjALsudik5CXEL6j1SOSB6T5QaOv1GxjV1zK7W9e16E9rNQCWgkMmGH8kgqIXvyhUVoQqoWXFa4v2X35TjV8M3wasj5piVTKRw9EnzoRiId0ogFBIQveuq7742nO3TDYFoDuQP6+c5MU0mIGnQnRLN0DgLyeOOpr+MPlaxlOozSyYddPCj2/1iw44NWkiayHMD/7MBWqphN+3p6jI5/+6033T9Tet3P5bnbbQTE4blXHY3fwif8xexGnFG9aqAEA5FifG8EtCSNkxP86oqk4Jz2+wHaijySN8VvDLNbczILOoun8kXjuSJtm5IPr6PxgY7HSOSY8Tk68fi54Eip3ASIS0c/3XJFclyqAm4iAH7Se9gOu69+5m+Olmb+wuEw/KBdtfS+iDs1WaAHPoaLjtga3JT3+6xhG0+e1q2lUlBfMagfr++2AX6t6dXNmNAKgWS5W+XrByp6HYrNG35jsw1xdrKYKN9QIZKtSe56GR1MoYCJ6lUg+7rWkSE3IwVKQm3ATa+1d57zyqUkdLujVoAoLIwMW3GvXZ7jD3bb7A7G6K2DzsChfmGs1s7Gy87CZNEAfW0Lcahc1F12VnckySd2dYFdwHfb1yISXduIN1oWavysZ/a+ul5ayNsWUL997dywdcPkWF8PtNrEfRNUJq5RFjUe7Ad6aldamsZWjaJ1JHi+Jsha9KYX2tMXXwqF3Gfz8gvt6eEWhcg0Wa71C+29KP1kghfgn6VPjZaWzPgR7ri/HqA5JxLFP5lYkPrJxAsb6F72/BsUSwAAAABJRU5ErkJggg=="
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-transport-ee331f0c.svg"
           alt="category-transport"
         />
       </div>
@@ -389,13 +410,13 @@
   </a>
 </li>
             <!-- Life -->
-            <li class="budget-card-wrapper py-5 px-4">
-  <a href="category-life-details.html">
+            <li class="budget-card-wrapper py-5 px-4 list-hover">
+  <a href="review-budget-details.html">
     <div class="budget-card d-flex align-items-center">
       <div class="me-4">
         <!-- category image-->
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVVSURBVHgB5ZrdbhtFFMfPjNcfIQ52CkmVkpZNVRXUIuKCBBhuwhOUXKYVInmCtk/Q5glanqCpUHDvGp6A3FRWikidCCIVAdnSQlRCqaM2zdpe73DO+iNrxx9r76zrDT8p8ma9u5q//2fOzJkdBpIopL+Z4iKQ4AqbBGAJECIuAFTnTxBZxrgGAjTTLK6ZYC4Hk18ugwQYuICEKQHlKyHEF/ioOEiHhLMlo2jcciO4K5FlcVeFgCnoHeiwOa8kLy5Ah3QkMn93MREM8us9FlePljPh84HkjOb0Bu70QnHv9iVF4fdfsUBCDXPYFD+krjq9oa2T4v7NOBQid/pAXAPYEgvtzbFzc9mWV7X6UqRTquDwPXSUJXtO2/BtKtInAiu0FNq0T4oAuwP+EEioYWyv1bUa0FCkWLl9HQfzBPgJam9+oGEyOhCuRnpxlnN+E3yKCWJa+fjCkv1cjUif9cMmsCxm3Al7xq0NVwZktwq+RsRNPXTZfqbqZNnFTTgU1Lq572TJxUNCrZtVkYJ5O6MxDKPm2P6/FzAeuFQZUiyRxsq3WCp51xefZXfg7r1V+OPPLet/+lxZXYPnL3bBO0Tc0CPWMGiJDAh2Hjxi68nfsLr+8wH3dD1nnd/+5yl4BWdU55ZFehWqJHDjwa9NvyfR6xsPPBOKBbdlHi/HrQqSoYa3Emhn45ffvOqjKulTDF1JBBxXlc6gUKSGOyESCcPJt4+DoijgCS9DKj6aqwLkQY78uP5TS2cGUFh0cBBOjI/B2NHR6nlKREPRQZBJkUNCMdFSV6tZdWw+fGQ52QoSZhdHfff38n3k6gT+yQL7ZVxqjFAjK8NEO8jpR3jtXyjQ/qOQ2LGjIxjGEZACLo1KFek00VhJqUWyoed8MPkeyEJayqEB/9nOjqNrn+++bNlnh+MxkIk0J7eebIMbKLsef2sMTuCf7Ewr7WlOXawnHovBSXUchmP77lFU6LlcTXJygxSRL3Z322ZUO6NvHLHCdeTNIwfEbT58XP3BRvA6Ga5KEVkodDZbieJYeDo6YR1Xsixl5fp+uoc/3FC0T0R2A7m2/fRfqy83S0L4ogdk8EpEtpu4N+qnbpAicqDDgXuvSf+VLa6CgnVWFlxCk+wgJohCl5WEV+IqKFhYZgW4n72O4/hG89ZOqBdnT0JnTp+ysq9bsPjQlEIAMoqEMoQG8cfYOCduHsPxbxQFUCVCNMqwQ9HXQAYCuKYEg3lN5N1Phmk8c+omhTdAuOnwQZWIrAm6EtEznNYmmQANJECNG4693vY6EkQ/Bi1uUdVhF0gTAImllkb6rAk6vj/4DiTx/tl32wol5+rFEdRHz7xzCmTBGCzTZ0mkYEsgCQpbKpM6cYPuoes/nDwrd3JulMyznkhxK/LhrMxtKhS6lGDIMZqL2ue2wbKQSuVxTGaRvI/GPi293aqOHcX04jXGuWevCmgSHwmHq07puu6FsCoYqgvso5k5Oq4WzTySv0Gbg8AjaLiwh6KXAgm9CPOV46pIykLCFF/DIYBctO8fqFn+8NrNHqHZXSRqRJKbuEQ5Bz7GNGG+fhfIgYUset8uhD/DltqtJGcW6s83XK3j4dw1vCUDfoKxTOCTC5cbfdVQpDXVM9k0HmrgD7RcUUw3+/J/se2s5eIywxtZSD9HG/WgH8G5KbWv3bZQx9VyMZ3CGVH/bJ7AJHMF++ANJ9d2tCTQF+GL7hkF80ros4uOE2NX6x5GOjXLeY83NqG4Ig7yweTMMnSIy432qSkOYhbD+Ly3G+3hVjfiKkh7/1oSbE4xHpjEeYcKlssdCdfKojKmIdZM/HQjzM5/qfGANCYjR+MAAAAASUVORK5CYII="
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-life-9072642b.svg"
           alt="category-life"
         />
       </div>
@@ -450,13 +471,13 @@
   </a>
 </li>
             <!-- Entertainment-->
-            <li class="budget-card-wrapper py-5 px-4">
-  <a href="category-entertainment-details.html">
+            <li class="budget-card-wrapper py-5 px-4 list-hover">
+  <a href="review-budget-empty.html">
     <div class="budget-card d-flex align-items-center">
       <div class="me-4">
         <!-- category image-->
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAV8SURBVHgB3Zv/ThxVFMe/d5jFUl2yVFNjW2VpKXRtDIuSpsaarvqXwWp5AukTlD4B5QnaPoHtE4CSWv+yaDRqY+0So4QfhcW0jdh0i0VZhJm5nnP3R3Zh9gdzZxaWT7IMMzszzHfOueec+wMBn5gdlwm7CXFDood24xKICCBa6/V07jJdk5ICKdiYNICJ4+fEBHxAQAMWJg18Sjc5z6LgMznhY8LBDR3BnkQqcU0YhkQC9SNFn5GufnEd22RbImduyjhdcaXO4jaTstfxXmxApGq9wKj1xJmv5EXa3NthgUy0qRkLs7fkcK0XVLXkvVEZef45jO4CcVugIDW2+h8u9A6I5UrnVRQ5dUtGmxzcxjai5A5Q1X3LimwQgXkqCi3bJkngKBpDIMPtdJSbltuXriJnv5RXaBNHYxGn2OEajLa4K6WJQdp8hgZF2hjo/liMFR8rEdlg7bAcy/+uo6M44pa4Kwlkc0fR2ET2mxgqPlCwZM6KC6gD6fQTtLTsp08LAqLEmgVL5qwYOJlMBnfu/oi5+RkESIk1i901gTqQyayiHggDF/MpxeQf01/I8wi4LVobFlJ/LODhowdqP2SGEDCRfaZKgxPKkqIJnyBgWCC7aGZtFQfaXkT7ax0IGu7n8tbM7SfgE+yO6XR6y/H00ydqGyVx4RdaVfDZjBkKoTXc6ltAMgxlvCGxQH670Yyn0IQfem5+tiBGhzAJ5Zdx+NAR6EJRts20TP3ybe7+rK/RcmXlGX79bVJF4s5jx6FDqBlRg8ZootBgMdfWgoDvm1pMQYdmmwfXHO8i+U3P3Q803ymhHJm94hiI1Dz84Qa3vw3L+wPUgmVtUGSeh1eE1BSZz3lBs7KyAh20RG7QW9YlZJoqb1bi2T9/QwctkZaLq/JDHzz4cmGfc17xfjEmVT1nz3yAU32nfUkX5dAS6UZvvA9v9vSp0M8CT731ttrn3LdTmPAZbqfsfp1HuxB99ShVMabKe/zJk0/2S4//xPc/fYuWfftVuffGyR7lmouaaWMzvluSRU5N/65+Z4EcHe/8/EPJObHu15V7xrpOqjTEUfrwK0cKx7iv6Se+i2QXjRYV39zu2ttLi/Glv5bUtjg6Lz1eygqm8tDv7pjv7soux0LZPR+QCLYauy4Ly7ssV0n8Yc6eeR8hsvgvybv45ruvEQS+i+T2xGK4EuJCYY2sc4jc0HJJN/wy8j2OcDjsS3HvhknzCctak5Sb4GDCn3L7xbB7ciHO3atHFQoLU7ODbRokEh5ppbev2364XT6sco7OKAKVdSkOPEl4pFql4hc6hYJN0/NGaF3N4Hr+41zhBAm3WZ2XuWYhaXRkxyZT8AC3lc5jXQgSHgvyOhzCCy147DWbJx18Do/wQ+j23svB941qDHhRQJ3grRJpA2PQgPPgO6ff9a2N8n24aOf76mCJrPFU9uDBLIvm4f1YpsJpgetQ3m4XLgoORF5S5aAu7Krd/UK5gbobt8vpcXmNRp21pwoKCb4NO0reVZlC7dps4SovDsIegabXR/K/F0SyNR0H17A3uF68fqCkF7IXrCmziyRGio+ViFTWtHEBDYwDjGxeBbKlP6nm2xvUbbm5xVzW3rl2mkMWLkOjpt0hkifOiSG3L1xFstvaBgYkvNe19STXDgfKfV912Znh4LbYxYslWKBTZdlZxTGe2Ici1byOXiH0yr7AkJhYpeertiy05kEBqogu+1ER+YUjcenER+JqLedua+RjV7gvWY+e+lJXv6g5MHoa3pm6KQfJz4frKpbE2ZJyoIe16FpjWFPjMkFjRIPUZnlu3veF9shWX2O2gxuxei+0d0MJBhKGgR4pycJCWblm4RwladBpma5LOgKT0kYy5tO/TPwPXKoqmJvXJMIAAAAASUVORK5CYII="
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-entertainment-36ab704c.svg"
           alt="category-entertainment"
         />
       </div>
@@ -489,13 +510,13 @@
   </a>
 </li>
             <!-- Medical-->
-            <li class="budget-card-wrapper py-5 px-4">
-  <a href="category-medical-details.html">
+            <li class="budget-card-wrapper py-5 px-4 list-hover">
+  <a href="review-budget-empty.html">
     <div class="budget-card d-flex align-items-center">
       <div class="me-4">
         <!-- category image-->
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA4CAYAAABHRFAgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQqSURBVHgB7ZvratRaFMf/ezvDgQqnA6fCOYKYI4L4yca2gn5xfAG1+ADaJ1CfQPsE2idQn8D6BM5n7ZgpeEEQjYgdsQodoaPSNtu1dpKaaeeSS3ecjP4gTbInCflnrb3XvqwK7BHq8eMqpJyk7QSdTtJWgYKV4BFrEHBp78LzlmmriZmZGvYAgQxoYaXSZRJzESxq72Hhi9jcvJdFcCqRgbgbJK6K/HChvHkxNXUXCUkkUj1yJlHGrZzF7cTFd5wTp2037g0y7oXKca6iBOcXC2Qs/IU39D434t4w0JL0MK5r94dA3G4U1VeJOWHba/0u6yuSBFr0oIdAolYybwa6b0+RBREY0ldo7zqpyEWLIZDheno/qFq76CqSLr4FP6AXCX7fro3RLndVdecKld5BUfEwK6btxWhRh8iC1cNecC/p/2iLu8NdBZvbQrGpUL/3WrRg25KBFd9gNOiwZulnOVtRIQsbGxv4ur6OVquFNJTLZb39c+AAMhJa8yaf/LTkE4etaCElr1+9wsvnz7XQrIyNjeGQZeHY8ePIwLY1dZ1US0s8VLKQkpcvXuDp8vKeCGTa7bb+YPzcDFSw6YdBv+HZV7qAlIQvZILMniG9i3qnT5SqIiVf1tZgkg8r75EaIbXxZNAVspCSVgKRhw4fxvlLl/Q+Lu31NjJgsT5JUwu5dd+4QYnuc8KSNI1hYZTxvMkS/bHId2GKI0ePYrziDw7+Hh/X+38PHsTY/v36uLmyQvVuBQaplGAYDuz/kagoLDoqvPAin1H8DEWwWLYinzeDMsMCNcZFchxtv32rj7nBYZHcIr8LyvLAXGUcIoxbMgpbjxucPK3I5CqSXddZWkLe/Bbu+kfkqGC8To5TsD9z9qwe8e8krKOfV1dhErak0bESx8VuAhmOmxMTEzCNpJVhswPCX48rsYEGRhlPksiyXqcfXUpoSD03KUZWqLs9W0djygcYRQRqvAtEykWMIltb2nh+nCS/pclzbmVjp6nwZDIPmb4MmC3/0GzqeNiLuPeHY9EEuGJ6WhtPi2S/VfX6Ak2DxE42+LT6kQa8zYHX8YdoZZi2DO/nj5FIZOCq/mGAnpr0F3xiWZO/rumeSpR+nYqufKclgmB5vXN9sl6/mcSaQ4vAXfLOufC0s4Mu5W0Y7ublgItvmI8WdIjUMdPDHIoMp6btyALZNdTS6+3KW0ARUVjolnvXNY8naIQ4d6BIGSANcdK2u/3QddAcdPVmgcJ09zhZabbXj79F2lnf6Q+yqEufwdaJesNJjd9vUFpo7HxXVXcohmJ4YqjCdTFl345zabKk3uFw3xo2SeApO/ZgP116tp+alndiUw1bmBczdg0JyZho71SxD1fokNfmDSba414acSGZREbRgqVXpbbsBD3Vgm/lJMJd+KIa/r9MyEYWYVF+ANSPqtGEUqt7AAAAAElFTkSuQmCC"
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-medical-b9cea189.svg"
           alt="category-medical"
         />
       </div>
@@ -1243,7 +1264,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../assets/js/accounting-modal.js"></script>
+
 
 <script>
   swiper = new Swiper(".category-swiper", {
@@ -1259,7 +1280,34 @@
 </script>
 
 
+    <script>
+      const eyeIcons = document.querySelectorAll(".income-card .eye-icon");
+      const incomeText = document.querySelectorAll(".income-card .income");
+
+      eyeIcons.forEach((item) => {
+        const income = item
+          .closest(".income-card")
+          .querySelector(".income span").innerText;
+        item.addEventListener("click", (e) => {
+          let isShow = item.dataset.show;
+          if (isShow === "true") {
+            item.src = "../assets/images/icon/eyes/eye_grey_no.svg";
+            item.setAttribute("data-show", "false");
+            item
+              .closest(".income-card")
+              .querySelector(".income span").innerText = "----";
+          } else {
+            item.src = "../assets/images/icon/eyes/eye_grey_yes.svg";
+            item.setAttribute("data-show", "true");
+            item
+              .closest(".income-card")
+              .querySelector(".income span").innerText = income;
+          }
+        });
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     
     
   </body>
