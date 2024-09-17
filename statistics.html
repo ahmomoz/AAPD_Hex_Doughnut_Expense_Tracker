@@ -99,7 +99,7 @@
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">本月收入</p>
       <img
-        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/eye_grey_yes-05e3eede.svg"
+        src="https://raw.githubusercontent.com/ahmomoz/AAPD_Hex_Doughnut_Expense_Tracker/main/assets/images/icon/eyes/eye_grey_yes.svg"
         alt="eye icon"
         class="eye-icon"
         data-show="true"
@@ -118,7 +118,7 @@
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">總存款</p>
       <img
-        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/eye_grey_yes-05e3eede.svg"
+        src="https://raw.githubusercontent.com/ahmomoz/AAPD_Hex_Doughnut_Expense_Tracker/main/assets/images/icon/eyes/eye_grey_yes.svg"
         alt="eye icon"
         class="eye-icon"
         data-show="true"
@@ -249,7 +249,7 @@
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">總存款</p>
       <img
-        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/eye_grey_yes-05e3eede.svg"
+        src="https://raw.githubusercontent.com/ahmomoz/AAPD_Hex_Doughnut_Expense_Tracker/main/assets/images/icon/eyes/eye_grey_yes.svg"
         alt="eye icon"
         class="eye-icon"
         data-show="true"
@@ -405,7 +405,7 @@
     <div class="d-flex mb-3 align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">本月總收入</p>
       <img
-        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/eye_grey_yes-05e3eede.svg"
+        src="https://raw.githubusercontent.com/ahmomoz/AAPD_Hex_Doughnut_Expense_Tracker/main/assets/images/icon/eyes/eye_grey_yes.svg"
         alt="eye icon"
         class="eye-icon"
         data-show="true"
@@ -526,8 +526,9 @@
         data-bs-target="#accountModal"
       >
         <img
-          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/account btn-8cc4ac62.png"
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/account_btn-lg-0350bf5d.png"
           alt="account-btn"
+          style="width: 64px; height: 64px;"
         />
       </a>
     </li>
@@ -1210,13 +1211,15 @@
         item.addEventListener("click", (e) => {
           let isShow = item.dataset.show;
           if (isShow === "true") {
-            item.src = "../assets/images/icon/eyes/eye_grey_no.svg";
+            item.src =
+              "https://raw.githubusercontent.com/ahmomoz/AAPD_Hex_Doughnut_Expense_Tracker/main/assets/images/icon/eyes/eye_grey_no.svg";
             item.setAttribute("data-show", "false");
             item
               .closest(".income-card")
               .querySelector(".income span").innerText = "----";
           } else {
-            item.src = "../assets/images/icon/eyes/eye_grey_yes.svg";
+            item.src =
+              "https://raw.githubusercontent.com/ahmomoz/AAPD_Hex_Doughnut_Expense_Tracker/main/assets/images/icon/eyes/eye_grey_yes.svg";
             item.setAttribute("data-show", "true");
             item
               .closest(".income-card")
