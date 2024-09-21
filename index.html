@@ -18,61 +18,28 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/index-9a45a41f.js"></script>
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-ce56a206.js">
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/index-a86b5758.js"></script>
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-07ab4053.js">
     <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/accounting-modal-6150d623.js">
     <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-687fa0d0.js">
-    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-0bf1d058.css">
+    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-a2b7ec68.css">
   </head>
   <body>
     <!-- Header -->
-    <div class="header position-fixed w-100" data-page="首頁">
-      <div class="bg-white py-3 shadow font-Nunito fs-7 position-relative">
-        <p class="text-center" style="transform: translateY(3px)">
-          2024 / 07 / 05 - 2024 / 08 / 04
+    <div class="header date-header w-100 position-fixed" data-page="首頁">
+      <div class="bg-white py-3 shadow font-Nunito d-flex position-relative">
+        <p class="text-center d-flex mx-auto">
+          2024&nbsp;/&nbsp;07&nbsp;/&nbsp;05&nbsp;-&nbsp;2024&nbsp;/&nbsp;08&nbsp;/&nbsp;04
         </p>
-        <div class="position-absolute end-0 top-50 translate-middle-y me-4">
-          <img
-            src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/review_uncheceked-151006ca.svg"
-            alt="review icon"
-            style="cursor: pointer"
-            data-bs-toggle="modal"
-            data-bs-target="#expenseReviewModal"
-          />
-        </div>
-      </div>
-    </div>
 
-    <div
-      class="modal fade"
-      id="expenseReviewModal"
-      tabindex="-1"
-      aria-labelledby="expenseReviewModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content mx-auto border-0" style="width: 70%">
-          <div class="modal-header border-bottom-0 pt-6 pe-6">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body d-flex justify-content-center px-10 py-0 mb-9">
-            <img src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/img_good-a8d1d057.png" alt="" class="w-100" />
-          </div>
-          <div class="modal-footer border-top-0 px-6 py-0 pb-6">
-            <a
-              href="review-expense.html"
-              type="button"
-              class="btn btn-gray-600 w-100 fs-8 m-0 py-1"
-            >
-              回顧上月財務
-            </a>
-          </div>
-        </div>
+        <img
+          src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/review_uncheceked-151006ca.svg"
+          alt="review icon"
+          style="cursor: pointer; right: 10px"
+          data-bs-toggle="modal"
+          data-bs-target="#expenseReviewModal"
+          class="position-absolute review-icon"
+        />
       </div>
     </div>
 
@@ -552,6 +519,40 @@
         </div>
       </div>
     </div>
+
+    <div
+      class="modal fade"
+      id="expenseReviewModal"
+      tabindex="-1"
+      aria-labelledby="expenseReviewModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content mx-auto border-0" style="width: 70%">
+          <div class="modal-header border-bottom-0 pt-6 pe-6">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center px-10 py-0 mb-9">
+            <img src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/img_good-a8d1d057.png" alt="" class="w-100" />
+          </div>
+          <div class="modal-footer border-top-0 px-6 py-0 pb-6">
+            <a
+              href="review-expense.html"
+              type="button"
+              class="btn btn-gray-600 w-100 fs-8 m-0 py-1"
+            >
+              回顧上月財務
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nav class="tab-bar-section fixed-bottom bg-white">
   <ul class="f-between-center px-4">
     <li>
