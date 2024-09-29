@@ -2,22 +2,14 @@
 <html lang="zh-hant">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/image_app-8a2b377b.png"
-    />
-
+    <link rel="icon" type="image/x-icon" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/image_app-8a2b377b.png" />
+    <title>記帳甜甜圈 | 檢視預算</title>
+    <!-- Material icon -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- Material icon -->
-    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>記帳甜甜圈 | 搜尋</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-ac054dbd.js"></script>
     <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/accounting-modal-8e49b4e7.js"></script>
     <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-9f9eaaf3.css">
@@ -25,7 +17,7 @@
   <body>
     <div
   class="header position-fixed w-100 fs-7"
-  data-page="搜尋"
+  data-page="檢視預算"
   style="z-index: 200"
 >
   <div class="bg-white py-3 shadow position-relative">
@@ -42,161 +34,12 @@
     
   </div>
 </div>
-    <div class="accounting-search-results-section pb-14">
-      <div class="px-4">
-        <div class="position-relative">
-          <input
-            type="search"
-            class="form-control radius-sm"
-            placeholder="請輸入關鍵字"
-            value="銀行">
-            <a href="#" class="position-absolute top-0 end-0 mt-2 me-4">
-              <img
-                src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/search_pressed-7b211d33.svg"
-                alt="icon-search"
-                style="width: 24px; height: 24px;"
-              >
-            </a>
-        </div>
-        <div class="tag-wrap mt-2">
-          <a href="#" class="badge badge-xs badge-gray-100 d-inline-flex align-items-center active">全部(5)</a>
-          <a href="#" class="badge badge-xs badge-gray-100 d-inline-flex align-items-center ms-2">名稱(3)</a>
-          <a href="#" class="badge badge-xs badge-gray-100 d-inline-flex align-items-center ms-2">類別(1)</a>
-          <a href="#" class="badge badge-xs badge-gray-100 d-inline-flex align-items-center ms-2">備註(1)</a>
-        </div>
-      </div>
-      <div class="mt-6">
-        <div class="f-between-center px-4 bg-surface-dark-gray">
-          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">7</span> 月<span class="font-Nunito fw-semibold"> 10</span> 日<span class="ms-2">星期三</span>
-          </p>
-          <div
-            class="font-Nunito text-white fw-semibold d-flex align-items-center py-1"
-          >
-            <p class="">-$ 150</p>
-          </div>
-        </div>
-        <div class="bg-white border-bottom f-between-center py-2 px-4">
-          <div class="d-flex align-items-center py-tiny">
-            <div class="flex-shrink-0">
-              <img
-                src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-bank-843ac351.svg"
-                alt="category-bank"
-                style="width: 48px; height: 48px"
-              />
-            </div>
-            <div class="flex-grow-1 ms-2">
-              <p class="fs-6">國泰世華銀行</p>
-            </div>
-          </div>
-          <div
-            class="font-Nunito text-red-600 fw-semibold text-end py-tiny"
-          >
-            <p>-$150</p>
-            <span
-              class="fs-9 text-white fw-normal bg-gray-300 rounded-pill text-center mt-1 px-2"
-            >
-            信用卡
-          </span>
-          </div>
-        </div>
-      </div>
-      <div class="mt-4">
-        <div class="f-between-center px-4 bg-surface-dark-gray">
-          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">7</span> 月<span class="font-Nunito fw-semibold"> 2</span> 日<span class="ms-2">星期二</span>
-          </p>
-          <div
-            class="font-Nunito text-white fw-semibold d-flex align-items-center py-1"
-          >
-            <p class="">+$ 200</p>
-          </div>
-        </div>
-        <div class="bg-white border-bottom f-between-center py-2 px-4">
-          <div class="d-flex align-items-center py-tiny">
-            <div class="flex-shrink-0">
-              <img
-                src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-life-9072642b.svg"
-                alt="category-life"
-                style="width: 48px; height: 48px"
-              />
-            </div>
-            <div class="flex-grow-1 ms-2">
-              <p class="fs-6">發票</p>
-              <p class="fs-8">中國信託銀行</p>
-            </div>
-          </div>
-          <div
-            class="font-Nunito text-green-500 fw-semibold d-flex align-items-center"
-          >
-            <p>+$200</p>
-          </div>
-        </div>
-      </div>
-      <div class="mt-4">
-        <div class="f-between-center px-4 bg-surface-dark-gray">
-          <p class="text-white fs-8 fw-normal"><span class="font-Nunito fw-semibold">6</span> 月<span class="font-Nunito fw-semibold"> 20</span> 日<span class="ms-2">星期四</span>
-          </p>
-          <div
-            class="font-Nunito text-white fw-semibold d-flex align-items-center py-1"
-          >
-            <p class="">-$ 2,000</p>
-          </div>
-        </div>
-        <div class="bg-white border-bottom f-between-center py-2 px-4">
-          <div class="d-flex align-items-center py-tiny">
-            <div class="flex-shrink-0">
-              <img
-                src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-learn-5bc12a19.svg"
-                alt="category-learn"
-                style="width: 48px; height: 48px"
-              />
-            </div>
-            <div class="flex-grow-1 ms-2">
-              <p class="fs-6">獎學金</p>
-            </div>
-          </div>
-          <div
-            class="font-Nunito text-green-500 fw-semibold text-end py-tiny"
-          >
-            <p>+$1,000</p>
-            <span
-              class="fs-9 text-white fw-normal bg-gray-300 rounded-pill text-center mt-1 px-2"
-            >
-            銀行
-            </span>
-          </div>
-        </div>
-        <div class="bg-white border-bottom f-between-center py-2 px-4">
-          <div class="d-flex align-items-center py-tiny">
-            <div class="flex-shrink-0">
-              <img
-                src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-bank-843ac351.svg"
-                alt="category-bank"
-                style="width: 48px; height: 48px"
-              />
-            </div>
-            <div class="flex-grow-1 ms-2">
-              <p class="fs-6">台北富邦銀行</p>
-            </div>
-          </div>
-          <div
-            class="font-Nunito text-red-600 fw-semibold text-end py-tiny"
-          >
-            <p>-$3,000</p>
-            <span
-              class="fs-9 text-white fw-normal bg-gray-300 rounded-pill text-center mt-1 px-2"
-            >
-            無限期
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <nav class="tab-bar-section fixed-bottom bg-white">
+ <nav class="tab-bar-section fixed-bottom bg-white">
   <ul class="f-between-center px-4">
     <li>
       <a
         href="index.html"
-        class="pt-3 pb-1 px-3 "
+        class="pt-3 pb-1 px-3 d-none"
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/home_default-0be4515a.svg"
@@ -206,7 +49,7 @@
       </a>
       <a
         href="index.html"
-        class="pt-3 pb-1 px-3 d-none"
+        class="pt-3 pb-1 px-3 "
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/home_selected-1b7def18.svg"
@@ -218,7 +61,7 @@
     <li>
       <a
         href="accounting-receipt.html"
-        class="pt-3 pb-1 px-3 d-none"
+        class="pt-3 pb-1 px-3 "
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/details_default-8edeb0e8.svg"
@@ -228,7 +71,7 @@
       </a>
       <a
         href="accounting-receipt.html"
-        class="pt-3 pb-1 px-3 "
+        class="pt-3 pb-1 px-3 d-none"
       >
         <img
           src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/details_selected-cce88395.svg"
@@ -986,6 +829,61 @@
 });
 </script>
 
+
+    <div class="review-budget-details pt-13 pb-14">
+      <div class="container px-4">
+        <div class="section-block py-5 px-6">
+          <!-- card head -->
+          <div class="d-flex mb-5">
+            <!-- category image-->
+            <img src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/category-entertainment-36ab704c.svg" alt="category-entertainment" width="32" height="32" class="me-1" />
+            <!-- category -->
+            <p class="fs-5 fw-bold">娛樂</p>
+          </div>
+          <!-- card body -->
+          <div>
+            <div class="d-flex f-between-center mb-3 flex-wrap">
+              <!-- budget count -->
+              <p><span class="fs-8 text-gray-600">剩餘 </span><span class="font-Nunito fw-bold fs-3">$1,700</span></p>
+            </div>
+            <!-- progress bar -->
+
+            <div
+              class="progress mb-3"
+              role="progressbar"
+              aria-label="progress bar"
+              aria-valuenow="28%"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="height: 12px">
+              <div class="progress-bar" style="width: 32%; height: 12px"></div>
+            </div>
+
+            <!-- budget count details -->
+            <div class="fs-9 text-gray-600">
+              <p>
+                已用: <span>$800</span>
+                <span>/ $2,500</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <table class="table mt-5 table-hover" style="background-color: #f7f7f7">
+          <thead>
+            <tr>
+              <th class="py-3 px-4" scope="col">支出</th>
+              <th scope="col" class="font-Nunito fw-semibold text-end py-3 px-4">$ 800</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border-0 py-6 text-center fs-7 text-gray-600" colspan="2">尚無子分類支出</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
     
   </body>

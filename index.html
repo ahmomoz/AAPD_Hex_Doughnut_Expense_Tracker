@@ -10,11 +10,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/index-651640e7.js"></script>
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-c3d27a68.js">
+    <script type="module" crossorigin src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/index-23ca741c.js"></script>
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-ac054dbd.js">
     <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/accounting-modal-8e49b4e7.js">
-    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-6217a18f.js">
-    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-40bc850e.css">
+    <link rel="modulepreload" crossorigin href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/pie-chart-f0555330.js">
+    <link rel="stylesheet" href="/AAPD_Hex_Doughnut_Expense_Tracker/assets/main-9f9eaaf3.css">
   </head>
   <body>
     <!-- Header -->
@@ -36,8 +36,10 @@
       <div class="container px-4">
         <div class="d-flex mb-5">
           <div class="w-50 me-2">
-  <div class="bg-surface-second radius-l py-4 px-5 income-card h-100">
-    <div class="d-flex mb-3 align-items-center">
+  <div
+    class="bg-surface-second radius-l px-5 income-card d-flex flex-column align-items-start justify-content-center income-card"
+    style="height: 76px">
+    <div class="d-flex align-items-center">
       <p class="fs-9 text-gray-600" style="margin-right: 2px">本月收入</p>
       <img
         src="https://raw.githubusercontent.com/ahmomoz/AAPD_Hex_Doughnut_Expense_Tracker/main/assets/images/icon/eyes/eye_grey_yes.svg"
@@ -45,29 +47,19 @@
         class="eye-icon"
         data-show="true"
         width="16"
-        height="16"
-      />
+        height="16" />
     </div>
 
-    <p class="income font-Nunito text-gray-950 fw-bold fs-5">
-      $<span>36,000</span>
-    </p>
+    <p class="income font-Nunito text-gray-950 fw-bold fs-5">$<span>36,000</span></p>
   </div>
 </div>
- <div class="w-50 me-2">
-  <div class="bg-surface-second radius-l py-4 px-5 income-card">
-    <div class="d-flex mb-3 align-items-center">
-      <p class="fs-9 text-gray-600" style="margin-right: 2px">
-        本月目標
-      </p>
+ <div class="w-50">
+  <div class="bg-surface-second radius-l px-5 d-flex flex-column align-items-start justify-content-center income-card" style="height: 76px">
+    <div class="d-flex align-items-center">
+      <p class="fs-9 text-gray-600" style="margin-right: 2px">本月目標</p>
 
       
-      <img
-        src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/edit_presed-1da754ca.svg"
-        alt="edit icon"
-        width="16"
-        height="16"
-      />
+      <img src="/AAPD_Hex_Doughnut_Expense_Tracker/assets/edit_presed-1da754ca.svg" alt="edit icon" width="16" height="16" />
       
     </div>
 
@@ -92,14 +84,18 @@
               style="cursor: pointer" />
           </div>
 
-          <canvas id="budget-pie-chart" class="graph"></canvas>
+          <div class="chart-section mb-10">
+            <div class="f-center">
+              <div class="chart-container" style="height: 180px; width: 180px">
+                <canvas id="budget-pie-chart" class="graph"></canvas>
 
-          <canvas id="home-total-expense-pie-chart" class="graph d-none"></canvas>
+                <canvas id="home-total-expense-pie-chart" class="graph d-none"></canvas>
+              </div>
+            </div>
 
-          <div>
-            <div class="d-flex flex-column font-Nunito align-items-end">
-              <p><span class="dot bg-gray-200 me-1"></span>已用：$12,950</p>
-              <p><span class="dot bg-orange-300 me-1"></span>剩餘：$15,050</p>
+            <div class="d-flex flex-column font-Nunito align-items-end chart-label-list">
+              <p class="chart-label"><span class="dot bg-gray-200 me-1"></span>已用：$12,950</p>
+              <p class="chart-label"><span class="dot bg-orange-300 me-1"></span>剩餘：$15,050</p>
             </div>
           </div>
         </div>
@@ -144,10 +140,11 @@
           aria-valuenow="27.77777777777778%"
           aria-valuemin="0"
           aria-valuemax="100"
+          style="height: 8px;"
         >
           <div
             class="progress-bar"
-            style="width: 27.77777777777778%"
+            style="height:8px; width: 27.77777777777778%"
           ></div>
         </div>
         
@@ -205,10 +202,11 @@
           aria-valuenow="12.5%"
           aria-valuemin="0"
           aria-valuemax="100"
+          style="height: 8px;"
         >
           <div
             class="progress-bar"
-            style="width: 12.5%"
+            style="height:8px; width: 12.5%"
           ></div>
         </div>
         
@@ -266,10 +264,11 @@
           aria-valuenow="73.33333333333333%"
           aria-valuemin="0"
           aria-valuemax="100"
+          style="height: 8px;"
         >
           <div
             class="progress-bar"
-            style="width: 73.33333333333333%"
+            style="height:8px; width: 73.33333333333333%"
           ></div>
         </div>
         
@@ -327,10 +326,11 @@
           aria-valuenow="66.66666666666666%"
           aria-valuemin="0"
           aria-valuemax="100"
+          style="height: 8px;"
         >
           <div
             class="progress-bar"
-            style="width: 66.66666666666666%"
+            style="height:8px; width: 66.66666666666666%"
           ></div>
         </div>
         
@@ -388,10 +388,11 @@
           aria-valuenow="80%"
           aria-valuemin="0"
           aria-valuemax="100"
+          style="height: 8px;"
         >
           <div
             class="progress-bar"
-            style="width: 80%"
+            style="height:8px; width: 80%"
           ></div>
         </div>
         
